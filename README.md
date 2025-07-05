@@ -1,37 +1,28 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+JN Global Trade - Jewelry Trading Company
+Website Title: JN Global Trade
+Description: A premier jewelry trading company specializing in high-quality gemstones and fine jewelry.
 
-## Getting Started
+About
+JN Global Trade is a trusted name in the jewelry industry, offering exquisite collections of diamonds, gemstones, and luxury jewelry pieces. Our mission is to provide exceptional quality and craftsmanship to clients worldwide.
 
-First, run the development server:
+Developer
+Name: Akshar Patel
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Agency: SplitX
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Agency Website: https://splitxcom.vercel.app/
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Features
+Elegant and responsive design
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Showcase of premium jewelry collections
 
-## Learn More
+Secure and user-friendly experience
 
-To learn more about Next.js, take a look at the following resources:
+Technologies Used
+(You can list the tech stack here, e.g., React, Next.js, Tailwind CSS, etc.)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Visit the Website
+(Add the live website URL once deployed)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# JN-Global-Trade
+© 2024 JN Global Trade | Developed by Akshar Patel

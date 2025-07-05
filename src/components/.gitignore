@@ -1,0 +1,49 @@
+import localFont from 'next/font/local'
+
+
+// const dansbold  = localFont({
+//   src: "../fonts/DancingScript/DancingScript-Bold.ttf"
+//  })
+// const dansregular = localFont({
+//   src: "../fonts/DancingScript/DancingScript-Regular.ttf"
+//  })
+// const dansmedium = localFont({
+//   src: "../fonts/DancingScript/DancingScript-Medium.ttf"
+//  })
+// const danssemibold = localFont({
+//   src: "../fonts/DancingScript/DancingScript-SemiBold.ttf"
+//  })
+
+
+const SatoshiMedium = localFont({
+  src: "../fonts/Satoshi/Fonts/Satoshi-Medium.ttf"
+ })
+//   const SatoshiRegular = localFont({
+//     src: "../fonts/Satoshi/Satoshi-Regular.ttf"
+//   })
+//   const SatoshiBold = localFont({
+//     src: "../fonts/Satoshi/Satoshi-Bold.ttf"
+//   })
+//   const SatoshiBlack = localFont({
+//     src: "../fonts/Satoshi/Satoshi-Black.ttf"
+//   })
+//   const SatoshiLight = localFont({
+//     src: "../fonts/Satoshi/Satoshi-Light.ttf"
+//   })
+// const SatoshiThin = localFont({
+//   src: "../fonts/Satoshi/Satoshi-MediumItalic.ttf"
+// })
+
+
+
+MONGODB_URI=mongodb+srv://jasonsfall1n1:H96cuQXqG1tsbjWj@north-n-loans.h02lf5j.mongodb.net/?retryWrites=true&w=majority&appName=North-N-loans
+
+/images/logos/JN_global_trade_logo.png
+
+hskhakjdh
+
+
+
+
+
+

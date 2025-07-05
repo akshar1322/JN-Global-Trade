@@ -39,3 +39,17 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+
+
+
+mongodb+srv://<db_username>:<db_password>@jnglobaltrad.phw1jki.mongodb.net/
+
+3rz4RJCQH9IR2gNp
+Admin
+
+ddaleujcd
+254445637664579
+RTSQV1n7OOnRSQuJfNyfOKzZoco
+
+CLOUDINARY_URL=cloudinary://254445637664579:RTSQV1n7OOnRSQuJfNyfOKzZoco@ddaleujcd

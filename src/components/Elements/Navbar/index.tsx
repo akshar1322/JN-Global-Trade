@@ -8,32 +8,38 @@ import { usePathname } from 'next/navigation';
 const navLinks = [
   { name: 'Home', href: '/' },
   { name: 'Shop', href: '/shop', mega: true },
-  { name: 'Blog', href: '/blog' },
+  // { name: 'Blog', href: '/blog' },
   { name: 'Contacts', href: '/contacts' },
 ];
 
 const brands = [
   'Necklaces', 'Bracelets', 'Earrings', 'Necklace Set with earrings', 'Brooches', 'Rings', 'Watches', 'Pendants', 'Chains', 'Anklets', 'Cufflinks', 'Charms', 'Hair Accessories', 'Body Jewelry', 'Jewelry Sets',
 ];
+const inquiry = () => {
+  window.location.href = 'https://wa.me/91XXXXXXXXXX?text=${encodeURIComponent(whatsappMessage)}' ;
+};
+const shopnow = () => {
+  window.location.href = '/shop';
+};
 
 const featuredProducts = [
   {
     tag: ['NEW'],
     name: 'Fleur De Lis Key Brooch',
     price: '$750',
-    image: '/images/logos/JN_global_trade_logo.png',
+    image: '/images/products/prod_0ccySAkc.webp',
   },
   {
     tag: ['NEW', 'FEATURED'],
     name: 'Starfish Brooch',
     price: '$850',
-    image: '/images/logos/JN_global_trade_logo.png',
+    image: '/images/products/prod_0InzJDmz.webp',
   },
   {
     tag: ['NEW'],
     name: 'Layer Cake Necklace Set',
     price: '$1,400',
-    image: '/images/logos/JN_global_trade_logo.png',
+    image: '/images/products/prod_0tZeNfew.webp',
   },
 ];
 
@@ -100,15 +106,15 @@ export default function Navbar() {
                           {/* Image Banner */}
                           <div className="relative">
                             <Image
-                              src="/images/logos/JN_global_trade_logo.png"
+                              src="/images/banners/prod_OM8Ph4jv.webp"
                               alt="Promo"
-                              width={400}
-                              height={300}
+                              width={700}
+                              height={500}
                               className="rounded-lg w-full object-cover"
                             />
                             <div className="absolute bottom-4 left-4 text-[#3A3A3A]">
                               <h3 className="text-xl font-semibold ">Order Today<br />And Get Free Delivery</h3>
-                              <button className="mt-2 px-4 py-2 border border-white rounded text-black hover:bg-white hover:text-[#3A3A3A] transition">SHOP NOW</button>
+                              <button onClick={shopnow} className="mt-2 px-4 py-2 cursor-pointer border border-white rounded text-black hover:bg-black hover:text-white transition">SHOP NOW</button>
                             </div>
                           </div>
 
@@ -140,8 +146,8 @@ export default function Navbar() {
 
           {/* Right Side Button */}
           <div className="flex items-center gap-4">
-            <button className="hidden sm:block bg-black text-white text-sm px-4 py-1.5 rounded hover:bg-gray-800 transition">
-              Login
+            <button onClick={inquiry} className="hidden sm:block cursor-pointer bg-black text-white text-sm px-4 py-1.5 rounded hover:bg-gray-800 transition">
+              inquiry
             </button>
 
             {/* Mobile Hamburger */}
@@ -204,8 +210,8 @@ export default function Navbar() {
           </ul>
 
           <div className="mt-8">
-            <button className="w-full bg-black text-white py-2 rounded text-center text-sm">
-              Login
+            <button onClick={inquiry} className="w-full cursor-pointer bg-black text-white py-4 rounded text-center text-sm">
+              inquiry
             </button>
           </div>
         </div>

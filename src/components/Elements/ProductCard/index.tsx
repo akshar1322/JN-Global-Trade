@@ -28,7 +28,7 @@ export default function ProductCard({ id, name, price, currency, image }: Produc
   }, []);
 
   return (
-    <Link href={`/products/${id}`} className="block group">
+    <Link href={`/shop/${id}`} className="block group">
       <motion.div
         ref={cardRef}
         whileHover={{ scale: 1.03 }}
@@ -40,7 +40,7 @@ export default function ProductCard({ id, name, price, currency, image }: Produc
             src={image}
             alt={name}
             fill
-            className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
+            className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
           />
         </div>
         <div className="p-4 text-center">

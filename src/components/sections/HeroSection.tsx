@@ -1,56 +1,56 @@
-'use client'
+'use client';
 
-import { useEffect, useRef, useState } from 'react'
-import Image from 'next/image'
-import { motion, useAnimation } from 'framer-motion'
-import { useMousePosition } from '@/hooks/useMousePosition'
-import { heroImages } from '@/data/herosectionimgs'
-import Link from 'next/link'
-import { ArrowRight } from 'react-feather'
+import { useEffect, useRef, useState } from 'react';
+import Image from 'next/image';
+import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 export default function HeroSection() {
-  const controls = useAnimation()
-  const ref = useRef<HTMLDivElement>(null)
-  const { x, y } = useMousePosition()
-  const [currentImage, setCurrentImage] = useState<string>('')
-  const [mouseOffset, setMouseOffset] = useState({ x: 0, y: 0 })
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
 
-  // Random image selection and auto-update every 10 min
+  const images = [
+    '/images/stock/prod_kiSgKXPV.webp',
+
+  ];
+
+  const [jewelryImage, setJewelryImage] = useState(images[0]);
+
   useEffect(() => {
-    const pickRandom = () => {
-      const index = Math.floor(Math.random() * heroImages.length)
-      setCurrentImage(heroImages[index])
-    }
-    pickRandom()
-    const interval = setInterval(pickRandom, 10 * 60 * 1000)
-    return () => clearInterval(interval)
-  }, [])
+    setJewelryImage(images[Math.floor(Math.random() * images.length)]);
+  }, []);
 
-  // Update mouse offset on client only
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const mouseX = x / window.innerWidth - 0.5
-      const mouseY = y / window.innerHeight - 0.5
-      setMouseOffset({ x: mouseX * 40, y: mouseY * 40 }) // Adjust multiplier to control movement intensity
-    }
-  }, [x, y])
+    const handleMouseMove = (e: MouseEvent) => {
+      setMousePos({ x: e.clientX, y: e.clientY });
+    };
+    window.addEventListener('mousemove', handleMouseMove);
+    return () => window.removeEventListener('mousemove', handleMouseMove);
+  }, []);
 
-  const imageVariants = {
-    default: {
-      x: mouseOffset.x,
-      y: mouseOffset.y,
-      transition: { type: 'tween' as const, ease: 'easeOut' as const, duration: 1 },
-    },
-    scroll: {
-      y: 100,
-      transition: { duration: 1.5, ease: 'easeOut' as const },
-    },
-  }
+  const getImagePosition = () => {
+    if (!containerRef.current) return { x: 0, y: 0 };
+
+    const rect = containerRef.current.getBoundingClientRect();
+    const centerX = rect.left + rect.width / 2;
+    const centerY = rect.top + rect.height / 2;
+
+    return {
+      x: (mousePos.x - centerX) * 0.2,
+      y: (mousePos.y - centerY) * 0.2,
+    };
+  };
+
+  const imagePosition = getImagePosition();
 
   return (
-    <section ref={ref} className="relative flex items-center justify-center h-screen bg-white overflow-hidden">
+    <section
+      ref={containerRef}
+      className="relative w-full h-screen overflow-hidden flex items-center justify-center bg-white"
+    >
+      {/* Heading */}
       <motion.h1
-        className="absolute z-10 text-[10vw] font-serif text-black leading-none"
+        className="absolute z-10 text-[10vw] font-serif text-gray-900 leading-none"
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
@@ -58,32 +58,36 @@ export default function HeroSection() {
         Fine <span className="relative z-20">Jewelry</span>
       </motion.h1>
 
-      {currentImage && (
-        <motion.div
-          className="absolute z-0 w-[500px] h-auto"
-          animate="default"
-          variants={imageVariants}
-          initial="default"
-        >
-          <Image
-            src={currentImage}
-            alt="Hero Jewelry"
-            width={500}
-            height={700}
-            className="rounded-xl object-cover"
-            priority
-          />
-        </motion.div>
-      )}
+      {/* Animated Image */}
+      <motion.div
+        className="absolute z-0 w-[300px] h-[420px] sm:w-[400px] sm:h-[600px] md:w-[500px] md:h-[700px] rounded-xl overflow-hidden"
+        animate={{
+          x: imagePosition.x,
+          y: imagePosition.y,
+          transition: { type: 'spring', damping: 20, stiffness: 100 },
+        }}
+      >
+        <Image
+          src={jewelryImage}
+          alt="Luxury Jewelry"
+          fill
+          className="object-cover rounded-xl"
+          priority
+        />
+      </motion.div>
 
-      <Link href="/products" className="absolute bottom-10 right-10 z-20">
+      {/* CTA Button */}
+      <Link href="/shop-all" className="absolute bottom-10 right-10 z-20">
         <motion.button
-          className="w-20 h-20 rounded-full border border-black flex items-center justify-center text-sm"
-          whileHover={{ scale: 1.1 }}
+          className="px-6 py-3 border border-black text-sm uppercase tracking-wider flex items-center gap-2 hover:bg-black hover:text-white transition duration-300"
+          whileHover={{ scale: 1.05 }}
         >
-          Shop All <ArrowRight className="ml-2 w-4 h-4" />
+          Shop All
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M5 12h14M12 5l7 7-7 7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
         </motion.button>
       </Link>
     </section>
-  )
+  );
 }

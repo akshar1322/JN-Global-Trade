@@ -2,6 +2,8 @@
 import { useEffect, useState } from 'react';
 import ProductCard from '@/components/Elements/ProductCard';
 import { IProduct } from '@/models/Product';
+import Navbar from '@/components/Elements/Navbar';
+import Footer from '@/components/Elements/Footer';
 
 export default function ShopPage() {
   const [products, setProducts] = useState<IProduct[]>([]);
@@ -27,7 +29,12 @@ export default function ShopPage() {
   }, []);
 
   return (
-    <div className="bg-white text-gray-700 px-6 py-10">
+   <>
+    <header>
+      <Navbar/>
+    </header>
+    <main>
+       <div className="bg-white text-gray-700 px-6 py-10">
       <h1 className="text-2xl font-bold mb-6">All Products</h1>
 
       {loading ? (
@@ -49,5 +56,10 @@ export default function ShopPage() {
         </div>
       )}
     </div>
+    </main>
+    <footer>
+      <Footer/>
+    </footer>
+   </>
   );
 }

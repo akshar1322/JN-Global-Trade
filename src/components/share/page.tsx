@@ -6,9 +6,6 @@ import Footer from '../Elements/Footer';
 import BestSellersSection from '../sections/BestSellersSection';
 import CategoryScrollShowcase from '../UI/CategoryScrollShowcase';
 import { InfiniteScrollBanner } from './InfiniteScrollBanner';
-
-
-import { FiStar, FiGift, FiTrendingUp } from "react-icons/fi";
 import { ImageCards } from '../Block/ImageCards';
 import { InstagramSlider } from '../Block/InstagramSlider';
 

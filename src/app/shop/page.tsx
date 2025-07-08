@@ -1,4 +1,5 @@
 'use client';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { useEffect, useState } from 'react';
 import ProductCard from '@/components/Elements/ProductCard';
 import { IProduct } from '@/models/Product';

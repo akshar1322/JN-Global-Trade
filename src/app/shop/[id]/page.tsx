@@ -37,6 +37,7 @@ export default function ProductPageWrapper({ params }: { params: { id: string } 
   }, [params.id]);
 
   if (!product) return <div className="p-10">Loading product...</div>;
+  if (!product) return notFound();
 
   const {
     name,

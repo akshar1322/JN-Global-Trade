@@ -1,4 +1,3 @@
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { NextResponse } from 'next/server';
 import dbConnect from '@/lib/dbConnect';
 import Product from '@/models/Product';
@@ -21,7 +20,7 @@ export async function GET(_req: Request, { params }: { params: { id: string } })
     }
 
     return NextResponse.json({ product });
-  } catch (error) {
+  } catch (_error: unknown) {
     return NextResponse.json({ message: 'Server error' }, { status: 500 });
   }
 }

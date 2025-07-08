@@ -3,6 +3,7 @@
 import { instagramPosts } from "@/data/instgrampostinfo";
 import { useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import Image from "next/image";
 
 export function InstagramSlider() {
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -41,7 +42,9 @@ export function InstagramSlider() {
               rel="noopener noreferrer"
               className="relative min-w-[200px] md:min-w-[250px] rounded-lg overflow-hidden group"
             >
-              <img
+              <Image
+                width={500}
+                height={300}
                 src={post.image}
                 alt={`Instagram post ${index + 1}`}
                 className="w-full h-[300px] object-cover rounded-lg"

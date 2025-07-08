@@ -2,12 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 import { HiArrowCircleRight } from "react-icons/hi";
 
-interface ButtonProps {
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   label?: string;
   icon?: React.ReactNode;
-  onClick?: React.MouseEventHandler<HTMLButtonElement>;
   className?: string;
-  [key: string]: any;
 }
 
 const ApplyButton: React.FC<ButtonProps> = ({
@@ -26,7 +24,6 @@ const ApplyButton: React.FC<ButtonProps> = ({
     </StyledWrapper>
   );
 };
-
 const StyledWrapper = styled.div`
   .button {
     position: relative;

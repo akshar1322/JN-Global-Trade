@@ -14,8 +14,9 @@ import type { IProduct } from '@/models/Product';
 import Footer from '@/components/Elements/Footer';
 import Navbar from '@/components/Elements/Navbar';
 
+// No longer include searchParams in the interface as it's not used
 interface PageProps {
-  searchParams?: { [key: string]: string | string[] | undefined };
+  // searchParams?: { [key: string]: string | string[] | undefined }; // Removed
 }
 
 async function getProduct(id: string): Promise<IProduct | null> {
@@ -32,7 +33,8 @@ async function getProduct(id: string): Promise<IProduct | null> {
   }
 }
 
-export default function ProductPageWrapper({ searchParams }: PageProps) {
+// Remove searchParams from the function parameters
+export default function ProductPageWrapper() {
   const params = useParams();
   const { id } = params as { id: string };
 
@@ -119,7 +121,7 @@ export default function ProductPageWrapper({ searchParams }: PageProps) {
 }
 
 function ImagesSection({ images, name }: { images: string[]; name: string }) {
-  const imageUrl = images && images.length > 0 ? images[0] : '/placeholder-image.png';
+  const imageUrl = images && images.length > 0 ? images[0] : '/placeholder-image.png'; // Assuming images is an array of strings, use the first element
 
   return (
     <div className="flex justify-center">

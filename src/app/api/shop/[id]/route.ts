@@ -4,17 +4,12 @@ import { Types } from 'mongoose';
 import dbConnect from '@/lib/dbConnect';
 import Product from '@/models/Product';
 
-interface RouteContext {
-  params: {
-    id: string;
-  };
-}
 
 export async function GET(
   req: NextRequest,
-  context: RouteContext
+  { params }: { params: { id: string } }
 ) {
-  const { id } = context.params;
+  const { id } = params;
 
   if (!Types.ObjectId.isValid(id)) {
     return NextResponse.json({ message: 'Invalid product ID' }, { status: 400 });
@@ -23,7 +18,7 @@ export async function GET(
   try {
     await dbConnect();
 
-    const product = await Product.findById(id).lean(); // lean() returns a plain JS object
+    const product = await Product.findById(id).lean();
 
     if (!product) {
       return NextResponse.json({ message: 'Product not found' }, { status: 404 });

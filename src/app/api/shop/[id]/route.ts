@@ -1,13 +1,12 @@
-import { NextRequest, NextResponse } from 'next/server';
-import type { NextApiRequest } from 'next';
-import type { RouteContext } from 'next';
+import { NextResponse } from 'next/server';
+import type { NextRequest } from 'next/server';
 import dbConnect from '@/lib/dbConnect';
 import Product from '@/models/Product';
 import mongoose from 'mongoose';
 
 export async function GET(
   request: NextRequest,
-  context: RouteContext
+  context: { params: { id: string } }
 ) {
   await dbConnect();
 

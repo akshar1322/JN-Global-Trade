@@ -1,7 +1,7 @@
 'use client';
 import { useEffect, useState } from 'react';
 import ProductCard from '@/components/Elements/ProductCard';
-import { IProduct } from '@/models/Product';
+import type { IProduct } from '@/models/Product';
 import Navbar from '@/components/Elements/Navbar';
 import Footer from '@/components/Elements/Footer';
 

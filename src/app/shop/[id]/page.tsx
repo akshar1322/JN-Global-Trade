@@ -1,19 +1,20 @@
 'use client';
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 import {
-  Instagram,
   Facebook,
+  Instagram,
   MessageCircleMore,
-  Plus,
   Minus,
   PhoneCall,
+  Plus,
 } from 'lucide-react';
-import { IProduct } from '@/models/Product';
+import type { IProduct } from '@/models/Product';
 import Footer from '@/components/Elements/Footer';
 import Navbar from '@/components/Elements/Navbar';
+
 
 interface PageProps {
   params: { id: string }; // Corrected to be a simple object

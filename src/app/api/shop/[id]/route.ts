@@ -1,30 +1,36 @@
-import { NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
+import { Types } from 'mongoose';
 import dbConnect from '@/lib/dbConnect';
 import Product from '@/models/Product';
-import mongoose from 'mongoose';
+
+interface RouteContext {
+  params: {
+    id: string;
+  };
+}
 
 export async function GET(
-  request: Request,
-  { params }: { params: { id: string } } // Corrected: Destructure params directly from the second argument
+  req: NextRequest,
+  context: RouteContext
 ) {
-  // params is now directly available due to destructuring in the function signature
-  const { id } = params;
+  const { id } = context.params;
 
-  await dbConnect();
-
-  if (!mongoose.Types.ObjectId.isValid(id)) {
-    return NextResponse.json({ message: 'Invalid ID' }, { status: 400 });
+  if (!Types.ObjectId.isValid(id)) {
+    return NextResponse.json({ message: 'Invalid product ID' }, { status: 400 });
   }
 
   try {
-    const product = await Product.findById(id);
+    await dbConnect();
+
+    const product = await Product.findById(id).lean(); // lean() returns a plain JS object
+
     if (!product) {
-      return NextResponse.json({ message: 'Not found' }, { status: 404 });
+      return NextResponse.json({ message: 'Product not found' }, { status: 404 });
     }
 
-    return NextResponse.json({ product });
+    return NextResponse.json({ product }, { status: 200 });
   } catch (error) {
-    console.error(error);
-    return NextResponse.json({ message: 'Server error' }, { status: 500 });
+    console.error('[PRODUCT_FETCH_ERROR]', error);
+    return NextResponse.json({ message: 'Internal Server Error' }, { status: 500 });
   }
 }

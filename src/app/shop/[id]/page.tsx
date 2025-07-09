@@ -1,4 +1,5 @@
 'use client';
+
 import { useEffect, useState } from 'react';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
@@ -15,10 +16,9 @@ import type { IProduct } from '@/models/Product';
 import Footer from '@/components/Elements/Footer';
 import Navbar from '@/components/Elements/Navbar';
 
-
 interface PageProps {
-  params: { id: string }; // Corrected to be a simple object
-  searchParams?: { [key: string]: string | string[] | undefined }; // Kept as is
+  params: { id: string };
+  searchParams?: { [key: string]: string | string[] | undefined };
 }
 
 async function getProduct(id: string): Promise<IProduct | null> {
@@ -45,16 +45,10 @@ export default function ProductPageWrapper({ params }: PageProps) {
     });
   }, [params.id]);
 
-  if (loading) return <div className="p-10">Loading product...</div>;
+  if (loading) return <div className="p-10 text-center">Loading product...</div>;
   if (!product) return notFound();
 
-  const {
-    name,
-    description,
-    price,
-    currency,
-    images,
-  } = product;
+  const { name, description, price, currency, images } = product;
 
   const whatsappMessage = `Hello, I’m interested in "${name}". Could you please provide more details?`;
   const whatsappURL = `https://wa.me/91XXXXXXXXXX?text=${encodeURIComponent(whatsappMessage)}`;
@@ -65,17 +59,15 @@ export default function ProductPageWrapper({ params }: PageProps) {
       <header>
         <Navbar />
       </header>
+
       <main className="bg-white max-w-full mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-2 gap-10">
-        {/* Left - Images */}
         <ImagesSection images={images} name={name} />
 
-        {/* Right - Details */}
         <div>
           <h1 className="text-3xl text-gray-800 font-semibold mb-2">{name}</h1>
           <p className="text-xl text-gray-800 mb-4">{currency} {price}</p>
           <p className="mb-6 text-gray-700">{description}</p>
 
-          {/* Inquiry Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 mb-6">
             <a
               href={whatsappURL}
@@ -94,10 +86,8 @@ export default function ProductPageWrapper({ params }: PageProps) {
             </Link>
           </div>
 
-          {/* Accordion */}
           <AccordionSection product={product} />
 
-          {/* Social Icons */}
           <div className="flex gap-4 mt-8 text-gray-600">
             <a href="https://wa.me/91XXXXXXXXXX" target="_blank" rel="noopener noreferrer">
               <PhoneCall />
@@ -111,6 +101,7 @@ export default function ProductPageWrapper({ params }: PageProps) {
           </div>
         </div>
       </main>
+
       <footer>
         <Footer />
       </footer>
@@ -118,9 +109,7 @@ export default function ProductPageWrapper({ params }: PageProps) {
   );
 }
 
-// ===================
-// Images Section
-// ===================
+// ========== Images Section ==========
 function ImagesSection({ images = [], name }: { images: string[]; name: string }) {
   const [preview, setPreview] = useState(images?.[0] ?? '/fallback.jpg');
 
@@ -134,9 +123,7 @@ function ImagesSection({ images = [], name }: { images: string[]; name: string }
             alt={`${name} ${i}`}
             width={80}
             height={80}
-            className={`cursor-pointer rounded border ${
-              preview === img ? 'ring-2 ring-pink-400' : ''
-            }`}
+            className={`cursor-pointer rounded border ${preview === img ? 'ring-2 ring-pink-400' : ''}`}
             onMouseEnter={() => setPreview(img)}
           />
         ))}
@@ -155,9 +142,7 @@ function ImagesSection({ images = [], name }: { images: string[]; name: string }
   );
 }
 
-// ===================
-// Accordion Section
-// ===================
+// ========== Accordion Section ==========
 function AccordionSection({ product }: { product: IProduct }) {
   const [open, setOpen] = useState<string | null>(null);
 
@@ -210,11 +195,7 @@ function AccordionSection({ product }: { product: IProduct }) {
             {title}
             {open === key ? <Minus size={16} /> : <Plus size={16} />}
           </button>
-          <div
-            className={`transition-all duration-300 ease-in-out overflow-hidden ${
-              open === key ? 'max-h-screen' : 'max-h-0'
-            }`}
-          >
+          <div className={`transition-all duration-300 ease-in-out overflow-hidden ${open === key ? 'max-h-screen' : 'max-h-0'}`}>
             {open === key && <div className="pt-2">{content}</div>}
           </div>
         </div>

@@ -1,11 +1,10 @@
-import type { NextRequest } from 'next/server';
 import { NextResponse } from 'next/server';
 import dbConnect from '@/lib/dbConnect';
 import Product from '@/models/Product';
 import mongoose from 'mongoose';
 
 export async function GET(
-  request: NextRequest,
+  request: Request,
   { params }: { params: { id: string } }
 ) {
   await dbConnect();

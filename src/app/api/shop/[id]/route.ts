@@ -1,5 +1,4 @@
-import { NextRequest, NextResponse } from 'next/server';
-import type { NextApiRequest } from 'next'; // You can remove this
+import { NextRequest, NextResponse } from 'next/server'; // You can remove this
 import dbConnect from '@/lib/dbConnect';
 import Product from '@/models/Product';
 import mongoose from 'mongoose';

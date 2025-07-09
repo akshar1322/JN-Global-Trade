@@ -5,12 +5,12 @@ import mongoose from 'mongoose';
 
 export async function GET(
   request: Request,
-  context: { params: { id: string } } // ✅ context, not just { params }
+  { params }: { params: { id: string } } // Corrected: Destructure params directly from the second argument
 ) {
-  const { params } = context; // Extract params from context
-  await dbConnect();
-
+  // params is now directly available due to destructuring in the function signature
   const { id } = params;
+
+  await dbConnect();
 
   if (!mongoose.Types.ObjectId.isValid(id)) {
     return NextResponse.json({ message: 'Invalid ID' }, { status: 400 });

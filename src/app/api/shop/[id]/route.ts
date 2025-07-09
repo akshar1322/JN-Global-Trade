@@ -1,16 +1,22 @@
-import { NextResponse } from 'next/server';
-import type { NextRequest } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
+import type { NextApiRequest } from 'next'; // You can remove this
 import dbConnect from '@/lib/dbConnect';
 import Product from '@/models/Product';
 import mongoose from 'mongoose';
 
+type Params = {
+  params: {
+    id: string;
+  };
+};
+
 export async function GET(
   request: NextRequest,
-  context: { params: { id: string } }
+  { params }: Params
 ) {
   await dbConnect();
 
-  const { id } = context.params as { id: string };
+  const { id } = params;
 
   if (!mongoose.Types.ObjectId.isValid(id)) {
     return NextResponse.json({ message: 'Invalid ID' }, { status: 400 });

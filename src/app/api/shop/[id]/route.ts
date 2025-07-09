@@ -4,13 +4,13 @@ import Product from '@/models/Product';
 import mongoose from 'mongoose';
 
 export async function GET(
-  request: Request,
-  context: { params: { id: string } }
+  request: Request, // Or NextRequest if you need its extended API
+  context: { params: Promise<{ id: string }> } // Type the params as a Promise
 ) {
-  const { params } = context;
-  await dbConnect();
+  // Await the params before accessing them
+  const { id } = await context.params;
 
-  const { id } = params;
+  await dbConnect();
 
   if (!mongoose.Types.ObjectId.isValid(id)) {
     return NextResponse.json({ message: 'Invalid ID' }, { status: 400 });

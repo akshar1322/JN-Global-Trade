@@ -1,32 +1,30 @@
 import { NextResponse } from 'next/server';
-import type { NextRequest } from 'next/server';
-import { Types } from 'mongoose';
 import dbConnect from '@/lib/dbConnect';
 import Product from '@/models/Product';
-
+import mongoose from 'mongoose';
 
 export async function GET(
-  req: NextRequest,
-  { params }: { params: { id: string } }
-) {
+  request: Request,
+  context: { params: { id: string } } // ✅ context, not just { params }
+) {
+  const { params } = context; // Extract params from context
+  await dbConnect();
+
   const { id } = params;
 
-  if (!Types.ObjectId.isValid(id)) {
-    return NextResponse.json({ message: 'Invalid product ID' }, { status: 400 });
+  if (!mongoose.Types.ObjectId.isValid(id)) {
+    return NextResponse.json({ message: 'Invalid ID' }, { status: 400 });
   }
 
   try {
-    await dbConnect();
-
-    const product = await Product.findById(id).lean();
-
+    const product = await Product.findById(id);
     if (!product) {
-      return NextResponse.json({ message: 'Product not found' }, { status: 404 });
+      return NextResponse.json({ message: 'Not found' }, { status: 404 });
     }
 
-    return NextResponse.json({ product }, { status: 200 });
+    return NextResponse.json({ product });
   } catch (error) {
-    console.error('[PRODUCT_FETCH_ERROR]', error);
-    return NextResponse.json({ message: 'Internal Server Error' }, { status: 500 });
-  }
+    console.error(error);
+    return NextResponse.json({ message: 'Server error' }, { status: 500 });
+  }
 }

@@ -5,8 +5,8 @@ import mongoose from 'mongoose';
 
 export async function GET(
   request: Request,
-  context: { params: { id: string } } // ✅ context, not just { params }
-) {
+  context: { params: { id: string } } // ✅ context, not just { params }
+) {
   const { params } = context; // Extract params from context
   await dbConnect();
 

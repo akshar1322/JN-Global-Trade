@@ -5,9 +5,9 @@ import mongoose from 'mongoose';
 
 export async function GET(
   request: Request,
-  context: { params: { id: string } } // ✅ context, not just { params }
-) {
-  const { params } = context; // Extract params from context
+  context: { params: { id: string } }
+) {
+  const { params } = context;
   await dbConnect();
 
   const { id } = params;
@@ -22,9 +22,9 @@ export async function GET(
       return NextResponse.json({ message: 'Not found' }, { status: 404 });
     }
 
-    return NextResponse.json({ product });
+    return NextResponse.json({ product }, { status: 200 });
   } catch (error) {
     console.error(error);
-    return NextResponse.json({ message: 'Server error' }, { status: 500 });
-  }
+    return NextResponse.json({ message: 'Server error' }, { status: 500 });
+  }
 }

@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { notFound } from 'next/navigation';
+import { notFound, useParams } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 import {
@@ -17,7 +17,6 @@ import Footer from '@/components/Elements/Footer';
 import Navbar from '@/components/Elements/Navbar';
 
 interface PageProps {
-  params: { id: string };
   searchParams?: { [key: string]: string | string[] | undefined };
 }
 
@@ -29,21 +28,35 @@ async function getProduct(id: string): Promise<IProduct | null> {
     if (!res.ok) return null;
     const data = await res.json();
     return data.product || null;
-  } catch {
+  } catch (error) {
+    console.error('Error fetching product:', error);
     return null;
   }
 }
 
-export default function ProductPageWrapper({ params }: PageProps) {
+export default function ProductPageWrapper({ searchParams }: PageProps) {
+  const params = useParams();
+  const { id } = params as { id: string };
+
   const [product, setProduct] = useState<IProduct | null>(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    getProduct(params.id).then((data) => {
-      setProduct(data);
+    if (id) {
+      getProduct(id)
+        .then((data) => {
+          setProduct(data);
+          setLoading(false);
+        })
+        .catch((error) => {
+          console.error('Error in getProduct useEffect:', error);
+          setLoading(false);
+        });
+    } else {
       setLoading(false);
-    });
-  }, [params.id]);
+      notFound();
+    }
+  }, [id]);
 
   if (loading) return <div className="p-10 text-center">Loading product...</div>;
   if (!product) return notFound();
@@ -66,140 +79,61 @@ export default function ProductPageWrapper({ params }: PageProps) {
         <div>
           <h1 className="text-3xl text-gray-800 font-semibold mb-2">{name}</h1>
           <p className="text-xl text-gray-800 mb-4">{currency} {price}</p>
-          <p className="mb-6 text-gray-700">{description}</p>
 
-          <div className="flex flex-col sm:flex-row gap-4 mb-6">
-            <a
-              href={whatsappURL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-green-600 hover:bg-green-700 text-white px-5 py-3 rounded-lg text-center flex items-center gap-2"
-            >
-              <PhoneCall size={18} /> WhatsApp Inquiry
-            </a>
-            <Link
-              href={emailURL}
-              target="_blank"
-              className="border border-gray-700 hover:bg-gray-100 text-gray-800 px-5 py-3 rounded-lg text-center flex items-center gap-2"
-            >
-              <MessageCircleMore size={18} /> Email Inquiry
-            </Link>
+          <p className="text-gray-700 mb-4">{description}</p>
+
+          <div className="flex items-center space-x-4 mb-6">
+            <span className="text-lg font-medium">Quantity:</span>
+            <div className="flex items-center border rounded-md">
+              <button className="p-2">
+                <Minus size={20} />
+              </button>
+              <input
+                type="number"
+                min="1"
+                defaultValue="1"
+                className="w-16 text-center border-l border-r py-1 px-2"
+              />
+              <button className="p-2">
+                <Plus size={20} />
+              </button>
+            </div>
           </div>
 
-          <AccordionSection product={product} />
+          <button className="bg-blue-600 text-white px-6 py-3 rounded-md text-lg font-medium hover:bg-blue-700 transition duration-300">
+            Add to Cart
+          </button>
 
-          <div className="flex gap-4 mt-8 text-gray-600">
-            <a href="https://wa.me/91XXXXXXXXXX" target="_blank" rel="noopener noreferrer">
-              <PhoneCall />
-            </a>
-            <a href="https://instagram.com/yourprofile" target="_blank" rel="noopener noreferrer">
-              <Instagram />
-            </a>
-            <a href="https://facebook.com/yourprofile" target="_blank" rel="noopener noreferrer">
-              <Facebook />
-            </a>
+          <div className="mt-8 flex items-center space-x-6">
+            <Link href={whatsappURL} target="_blank" rel="noopener noreferrer" className="text-green-500 hover:text-green-600">
+              <PhoneCall size={24} />
+            </Link>
+            <Link href={emailURL} className="text-blue-500 hover:text-blue-600">
+              <MessageCircleMore size={24} />
+            </Link>
           </div>
         </div>
       </main>
 
-      <footer>
-        <Footer />
-      </footer>
+      <Footer />
     </>
   );
 }
 
-// ========== Images Section ==========
-function ImagesSection({ images = [], name }: { images: string[]; name: string }) {
-  const [preview, setPreview] = useState(images?.[0] ?? '/fallback.jpg');
+function ImagesSection({ images, name }: { images: string[]; name: string }) {
+  const imageUrl = images && images.length > 0 ? images[0] : '/placeholder-image.png';
 
   return (
-    <div className="flex gap-4">
-      <div className="flex flex-col gap-2">
-        {images.map((img, i) => (
-          <Image
-            key={i}
-            src={img}
-            alt={`${name} ${i}`}
-            width={80}
-            height={80}
-            className={`cursor-pointer rounded border ${preview === img ? 'ring-2 ring-pink-400' : ''}`}
-            onMouseEnter={() => setPreview(img)}
-          />
-        ))}
-      </div>
-
-      <div className="flex-1">
+    <div className="flex justify-center">
+      <div className="relative w-full max-w-md h-96">
         <Image
-          src={preview}
+          src={imageUrl}
           alt={name}
-          width={500}
-          height={500}
-          className="rounded-lg object-cover transition-transform duration-300 hover:scale-105"
+          layout="fill"
+          objectFit="contain"
+          className="rounded-md"
         />
       </div>
-    </div>
-  );
-}
-
-// ========== Accordion Section ==========
-function AccordionSection({ product }: { product: IProduct }) {
-  const [open, setOpen] = useState<string | null>(null);
-
-  const toggle = (key: string) => {
-    setOpen((prev) => (prev === key ? null : key));
-  };
-
-  return (
-    <div className="mt-8 border-t pt-4 space-y-4">
-      {[
-        {
-          title: 'Product Info',
-          key: 'info',
-          content: (
-            <ul className="text-sm text-gray-700 space-y-1">
-              {product.specifications &&
-                Object.entries(product.specifications).map(([k, v]) => (
-                  <li key={k}>
-                    <span className="capitalize font-medium">{k}</span>: {v}
-                  </li>
-                ))}
-            </ul>
-          ),
-        },
-        {
-          title: 'Return & Refund Policy',
-          key: 'returns',
-          content: (
-            <p className="text-sm text-gray-700">
-              Returns are accepted within 7 days of delivery. Product must be unused, with original packaging.
-            </p>
-          ),
-        },
-        {
-          title: 'Shipping Info',
-          key: 'shipping',
-          content: (
-            <p className="text-sm text-gray-700">
-              We ship across India in 3–5 business days. Free shipping on orders over ₹999.
-            </p>
-          ),
-        },
-      ].map(({ key, title, content }) => (
-        <div key={key}>
-          <button
-            type="button"
-            onClick={() => toggle(key)}
-            className="flex items-center justify-between w-full text-left font-semibold cursor-pointer text-gray-800 py-2"
-          >
-            {title}
-            {open === key ? <Minus size={16} /> : <Plus size={16} />}
-          </button>
-          <div className={`transition-all duration-300 ease-in-out overflow-hidden ${open === key ? 'max-h-screen' : 'max-h-0'}`}>
-            {open === key && <div className="pt-2">{content}</div>}
-          </div>
-        </div>
-      ))}
     </div>
   );
 }

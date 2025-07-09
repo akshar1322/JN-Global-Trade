@@ -6,17 +6,17 @@ const cards = [
   {
     title: "Best Sellers",
     bgColor: "transparent",
-    image: "/images/products/DSC08994.JPG",
+    image: "/images/products/prod_kf56arWI.webp",
   },
   {
     title: "Gifts of Love",
     bgColor: "transparent",
-    image: "/images/products/DSC08998.JPG",
+    image: "/images/products/prod_PlTU06fM.webp",
   },
   {
     title: "New In",
     bgColor: "transparent",
-    image: "/images/products/DSC09000.JPG",
+    image: "/images/products/prod_rRXkj2e0.webp",
   },
 ];
 

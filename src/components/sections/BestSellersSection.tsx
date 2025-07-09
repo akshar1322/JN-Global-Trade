@@ -39,7 +39,7 @@ export default function BestSellersSection() {
             >
               <div className="relative w-full h-56">
                 <Image
-                  src={product.images[0] || '/placeholder.jpg'}
+                  src={product.images[0] || '/placeholder.webp'}
                   alt={product.name}
                   fill
                   sizes="(max-width: 640px) 100vw, 25vw"

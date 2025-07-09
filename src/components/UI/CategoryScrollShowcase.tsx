@@ -11,19 +11,19 @@ gsap.registerPlugin(ScrollTrigger);
 const categories = [
   {
     title: 'Rings',
-    image: '/images/products/DSC08994.JPG',
+    image: '/images/products/prod_c87MXymR.webp',
   },
   {
     title: 'Earrings',
-    image: '/images/products/DSC08998.JPG',
+    image: '/images/products/prod_kf56arWI.webp',
   },
   {
     title: 'Necklaces',
-    image: '/images/products/DSC09000.JPG',
+    image: '/images/products/prod_JiBJm51f.webp',
   },
   {
     title: 'Bracelets',
-    image: '/images/products/DSC09004.JPG',
+    image: '/images/products/prod_lqTAAzd_.webp',
   },
 ];
 

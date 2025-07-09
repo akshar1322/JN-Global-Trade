@@ -11,14 +11,13 @@ export default function HeroSection() {
 
   const images = [
     '/images/stock/prod_kiSgKXPV.webp',
-
   ];
 
   const [jewelryImage, setJewelryImage] = useState(images[0]);
 
   useEffect(() => {
     setJewelryImage(images[Math.floor(Math.random() * images.length)]);
-  }, []);
+  }, [images]); // Added images to the dependency array
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {

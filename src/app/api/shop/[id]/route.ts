@@ -1,14 +1,26 @@
-import { NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import dbConnect from '@/lib/dbConnect';
 import Product from '@/models/Product';
 import mongoose from 'mongoose';
 
-export async function GET(_req: Request, { params }: { params: { id: string } }) {
+// Define strict types for route parameters
+type RouteParams = {
+  params: {
+    id: string;
+  };
+  // Add other expected properties here if needed
+  searchParams?: URLSearchParams;
+  // etc...
+};
+
+export async function GET(
+  request: NextRequest,
+  context: RouteParams
+): Promise<NextResponse> {
   await dbConnect();
 
-  const { id } = params;
+  const { id } = context.params;
 
-  // ✅ Validate ID format
   if (!mongoose.Types.ObjectId.isValid(id)) {
     return NextResponse.json({ message: 'Invalid ID' }, { status: 400 });
   }
@@ -20,7 +32,11 @@ export async function GET(_req: Request, { params }: { params: { id: string } })
     }
 
     return NextResponse.json({ product });
-  } catch (_error: unknown) {
-    return NextResponse.json({ message: 'Server error' }, { status: 500 });
+  } catch (error) {
+    console.error('Error fetching product:', error);
+    return NextResponse.json(
+      { message: 'Internal Server Error' },
+      { status: 500 }
+    );
   }
 }

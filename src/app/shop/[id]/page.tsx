@@ -1,12 +1,11 @@
 'use client';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { useState, useEffect } from 'react';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 import {
-  Facebook,
   Instagram,
+  Facebook,
   MessageCircleMore,
   Plus,
   Minus,
@@ -15,6 +14,11 @@ import {
 import { IProduct } from '@/models/Product';
 import Footer from '@/components/Elements/Footer';
 import Navbar from '@/components/Elements/Navbar';
+
+interface PageProps {
+  params: { id: string }; // Corrected to be a simple object
+  searchParams?: { [key: string]: string | string[] | undefined }; // Kept as is
+}
 
 async function getProduct(id: string): Promise<IProduct | null> {
   try {
@@ -29,14 +33,18 @@ async function getProduct(id: string): Promise<IProduct | null> {
   }
 }
 
-export default function ProductPageWrapper({ params }: { params: { id: string } }) {
+export default function ProductPageWrapper({ params }: PageProps) {
   const [product, setProduct] = useState<IProduct | null>(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    getProduct(params.id).then(setProduct);
+    getProduct(params.id).then((data) => {
+      setProduct(data);
+      setLoading(false);
+    });
   }, [params.id]);
 
-  if (!product) return <div className="p-10">Loading product...</div>;
+  if (loading) return <div className="p-10">Loading product...</div>;
   if (!product) return notFound();
 
   const {
@@ -53,58 +61,58 @@ export default function ProductPageWrapper({ params }: { params: { id: string } 
 
   return (
     <>
-    <header>
-      <Navbar />
-    </header>
+      <header>
+        <Navbar />
+      </header>
       <main className="bg-white max-w-full mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-2 gap-10">
-      {/* Left - Images */}
-      <ImagesSection images={images} name={name} />
+        {/* Left - Images */}
+        <ImagesSection images={images} name={name} />
 
-      {/* Right - Details */}
-      <div>
-        <h1 className="text-3xl text-gray-800 font-semibold mb-2">{name}</h1>
-        <p className="text-xl text-gray-800 mb-4">{currency} {price}</p>
-        <p className="mb-6 text-gray-700">{description}</p>
+        {/* Right - Details */}
+        <div>
+          <h1 className="text-3xl text-gray-800 font-semibold mb-2">{name}</h1>
+          <p className="text-xl text-gray-800 mb-4">{currency} {price}</p>
+          <p className="mb-6 text-gray-700">{description}</p>
 
-        {/* Inquiry Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 mb-6">
-          <a
-            href={whatsappURL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-green-600 hover:bg-green-700 text-white px-5 py-3 rounded-lg text-center flex items-center gap-2"
-          >
-            <PhoneCall size={18} /> WhatsApp Inquiry
-          </a>
-          <Link
-            href={emailURL}
-            target="_blank"
-            className="border border-gray-700 hover:bg-gray-100 text-gray-800 px-5 py-3 rounded-lg text-center flex items-center gap-2"
-          >
-            <MessageCircleMore size={18} /> Email Inquiry
-          </Link>
+          {/* Inquiry Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 mb-6">
+            <a
+              href={whatsappURL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-green-600 hover:bg-green-700 text-white px-5 py-3 rounded-lg text-center flex items-center gap-2"
+            >
+              <PhoneCall size={18} /> WhatsApp Inquiry
+            </a>
+            <Link
+              href={emailURL}
+              target="_blank"
+              className="border border-gray-700 hover:bg-gray-100 text-gray-800 px-5 py-3 rounded-lg text-center flex items-center gap-2"
+            >
+              <MessageCircleMore size={18} /> Email Inquiry
+            </Link>
+          </div>
+
+          {/* Accordion */}
+          <AccordionSection product={product} />
+
+          {/* Social Icons */}
+          <div className="flex gap-4 mt-8 text-gray-600">
+            <a href="https://wa.me/91XXXXXXXXXX" target="_blank" rel="noopener noreferrer">
+              <PhoneCall />
+            </a>
+            <a href="https://instagram.com/yourprofile" target="_blank" rel="noopener noreferrer">
+              <Instagram />
+            </a>
+            <a href="https://facebook.com/yourprofile" target="_blank" rel="noopener noreferrer">
+              <Facebook />
+            </a>
+          </div>
         </div>
-
-        {/* Accordion */}
-        <AccordionSection product={product} />
-
-        {/* Social Icons */}
-        <div className="flex gap-4 mt-8 text-gray-600">
-          <a href="https://wa.me/91XXXXXXXXXX" target="_blank" rel="noopener noreferrer">
-            <PhoneCall />
-          </a>
-          <a href="https://instagram.com/yourprofile" target="_blank" rel="noopener noreferrer">
-            <Instagram />
-          </a>
-          <a href="https://facebook.com/yourprofile" target="_blank" rel="noopener noreferrer">
-            <Facebook />
-          </a>
-        </div>
-      </div>
-    </main>
-    <footer>
-      <Footer />
-    </footer>
+      </main>
+      <footer>
+        <Footer />
+      </footer>
     </>
   );
 }
@@ -113,7 +121,7 @@ export default function ProductPageWrapper({ params }: { params: { id: string } 
 // Images Section
 // ===================
 function ImagesSection({ images = [], name }: { images: string[]; name: string }) {
-  const [preview, setPreview] = useState(images[0]);
+  const [preview, setPreview] = useState(images?.[0] ?? '/fallback.jpg');
 
   return (
     <div className="flex gap-4">
@@ -157,13 +165,13 @@ function AccordionSection({ product }: { product: IProduct }) {
   };
 
   return (
-    <div className="mt-8  border-t pt-4 space-y-4">
+    <div className="mt-8 border-t pt-4 space-y-4">
       {[
         {
           title: 'Product Info',
           key: 'info',
           content: (
-            <ul className="text-sm  text-gray-700 space-y-1">
+            <ul className="text-sm text-gray-700 space-y-1">
               {product.specifications &&
                 Object.entries(product.specifications).map(([k, v]) => (
                   <li key={k}>

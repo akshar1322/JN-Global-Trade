@@ -33,7 +33,7 @@ const AboutUs = () => {
         {/* Left Image */}
         <div className="w-full flex justify-center">
           <Image
-            src="/images/stock/Stocking_02.jpg" // update with your actual image path
+            src="/images/stock/Stocking_02.webp" // update with your actual image path
             alt="About Us"
             width={500}
             height={400}

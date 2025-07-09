@@ -53,7 +53,7 @@ const MultiStepForm = () => {
 
   if (submitted) {
     return (
-      <div className={`${SatoshiRegular.className} min-h-screen flex items-center justify-center bg-[url('/images/bg/brooke-cagle-cb4Dv50LN1Y-unsplash.jpg')] bg-cover bg-center px-4 md:px-10 py-10`}>
+      <div className={`${SatoshiRegular.className} min-h-screen flex items-center justify-center bg-[url('/images/bg/brooke-cagle-cb4Dv50LN1Y-unsplash.webp')] bg-cover bg-center px-4 md:px-10 py-10`}>
         <div className="bg-white/30 backdrop-blur-xl p-6 sm:p-10 md:p-16 rounded-3xl shadow-2xl border border-white/40 text-center w-full max-w-2xl mx-auto">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">🎉 Thank You!</h1>
           <p className="text-lg md:text-2xl text-[#333]">Your application has been received. We&apos;ll be in touch very soon!</p>
@@ -70,7 +70,7 @@ const MultiStepForm = () => {
   };
 
   return (
-    <div className={`min-h-screen flex items-center justify-center bg-cover bg-center px-4 sm:px-6 lg:px-12 py-10`} style={{ backgroundImage: `url('/images/bg/Stock_07.jpg')` }}>
+    <div className={`min-h-screen flex items-center justify-center bg-cover bg-center px-4 sm:px-6 lg:px-12 py-10`} style={{ backgroundImage: `url('/images/bg/Stock_07.webp')` }}>
       <div className="relative w-full max-w-4xl sm:max-w-5xl bg-white/20 backdrop-blur-2xl rounded-3xl p-6 sm:p-10 md:p-20 shadow-2xl border border-white/40 text-[#333333]">
         <AnimatePresence mode="wait">
           {step === 0 && (

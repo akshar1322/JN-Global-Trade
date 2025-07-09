@@ -3,6 +3,8 @@
 import { versions } from "@/data/version";
 import { useState } from "react";
 import styled from "styled-components";
+import Link from "next/link";
+
 
 const Footer = () => {
   const latestVersion = versions[versions.length - 1];
@@ -35,24 +37,24 @@ const Footer = () => {
         {/* Navigation */}
         <div>
           <ul className="space-y-2">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Shop</a></li>
-            <li><a href="#">Our Story</a></li>
-            <li><a href="#">Gift Card</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Locations</a></li>
+            <li><Link href="/home">Home</Link></li>
+            <li><Link href="/shop">Shop</Link></li>
+            <li><Link href="/">Our Story</Link></li>
+            <li><Link href="/">Gift Card</Link></li>
+            <li><Link href="/contacts">Contact</Link></li>
+            <li><Link href="/">Locations</Link></li>
           </ul>
         </div>
 
         {/* Policies */}
         <div>
           <ul className="space-y-2">
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Terms & Conditions</a></li>
-            <li><a href="#">Shipping Policy</a></li>
-            <li><a href="#">Refund Policy</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Accessibility Statement</a></li>
+            <li><Link href="/">FAQ</Link></li>
+            <li><Link href="/">Terms & Conditions</Link></li>
+            <li><Link href="/">Shipping Policy</Link></li>
+            <li><Link href="/">Refund Policy</Link></li>
+            <li><Link href="/">Privacy Policy</Link></li>
+            <li><Link href="/">Accessibility Statement</Link></li>
           </ul>
         </div>
 
@@ -116,7 +118,8 @@ const Footer = () => {
         </div>
 
         <div className="mt-4 md:mt-0 text-ms text-right uppercase">
-          <p>© 2035 by JN GLOBAL TRADED</p>
+          <p>© {new Date().getFullYear()} by JN GLOBAL TRADED</p>
+
           <p>
             {latestVersion.newVersion} • developed by{" "}
             <a

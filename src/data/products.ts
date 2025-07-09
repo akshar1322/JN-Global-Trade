@@ -86,8 +86,8 @@ export const products: Product[] = [
       packaging: 'Luxury ring box included',
     },
     images: [
-      '/images/products/DSC08994.JPG',
-      '/images/products/DSC08994.JPG',
+      '/images/products/DSC08994.webp',
+      '/images/products/DSC08994.webp',
     ],
     inStock: false,
     tags: ['diamond', 'engagement', 'white-gold'],

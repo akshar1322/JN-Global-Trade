@@ -9,7 +9,9 @@ export async function GET() {
   try {
     const products = await Product.aggregate([{ $sample: { size: 4 } }]);
     return NextResponse.json(products);
-  } catch (_error) {
+  } catch (error) { // Changed _error to error
+    console.error(error); // Log the error for debugging
     return NextResponse.json({ error: 'Failed to fetch products' }, { status: 500 });
   }
 }
+export const revalidate = 60; // Revalidate every 60 seconds

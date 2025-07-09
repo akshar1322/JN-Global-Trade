@@ -1,4 +1,5 @@
-import { IProduct } from "@/models/Product";
+import type { IProduct } from "@/models/Product";
+
 
 export async function getAllProducts(): Promise<IProduct[]> {
   const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL || ''}/api/shop`, {

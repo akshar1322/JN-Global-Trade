@@ -4,6 +4,7 @@ import { versions } from "@/data/version";
 import { useState } from "react";
 import styled from "styled-components";
 import Link from "next/link";
+import React from "react";
 
 
 const Footer = () => {

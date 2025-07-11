@@ -60,7 +60,7 @@ export default function ProductPageWrapper() {
   const { name, description, price, currency, images } = product;
 
   const whatsappMessage = `Hello, I’m interested in "${name}". Could you please provide more details?`;
-  const whatsappURL = `https://wa.me/91XXXXXXXXXX?text=${encodeURIComponent(whatsappMessage)}`;
+  const whatsappURL = `https://wa.me/917359709631?text=${encodeURIComponent(whatsappMessage)}`;
   const emailURL = `/inquiry?product=${encodeURIComponent(name)}`;
 
   return (
@@ -96,9 +96,7 @@ export default function ProductPageWrapper() {
             </div>
           </div>
 
-          <button className="bg-blue-600 text-white px-6 py-3 rounded-md text-lg font-medium hover:bg-blue-700 transition duration-300">
-            Add to Cart
-          </button>
+          <p className="text-gray-600 mb-6">For inquiries, you can contact us via WhatsApp or email.</p>
 
           <div className="mt-8 flex items-center space-x-6">
             <Link href={whatsappURL} target="_blank" rel="noopener noreferrer" className="text-green-500 hover:text-green-600">

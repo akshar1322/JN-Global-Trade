@@ -1,0 +1,1105 @@
+{
+  "name": "Necklace En01",
+  "description": "Bold choker necklace with crystal embellishments and antique finish.",
+  "price": 3999,
+  "currency": "INR",
+  "productType": "Jewelry",
+  "category": "Necklaces",
+  "subCategory": "Chokers",
+  "highlights": ["Crystal Detail", "Antique Style"],
+  "specifications": {
+    "material": "Oxidized Silver",
+    "weight": "22g",
+    "dimensions": "Adjustable 14-18 inches",
+    "gemstone": "Clear Crystal",
+    "careInstructions": "Store in dry place.",
+    "madeIn": "India"
+  },
+  "subSpecifications": {
+    "metalPurity": "Silver Finish",
+    "claspType": "Adjustable Chain",
+    "warranty": "1 Year",
+    "packaging": "Fabric Box"
+  },
+  "images": ["/images/products/prod_4bHStoE6.webp",]
+  "inStock": true,
+  "tags": ["choker", "silver", "statement", "bold"]
+},
+
+{
+  "name": "Necklace En01",
+  "description": "Bold choker necklace with crystal embellishments and antique finish.",
+  "price": 3999,
+  "currency": "INR",
+  "productType": "Jewelry",
+  "category": "Necklaces",
+  "subCategory": "Chokers",
+  "highlights": ["Crystal Detail", "Antique Style"],
+  "specifications": {
+    "material": "Oxidized Silver",
+    "weight": "22g",
+    "dimensions": "Adjustable 14-18 inches",
+    "gemstone": "Clear Crystal",
+    "careInstructions": "Store in dry place.",
+    "madeIn": "India"
+  },
+  "subSpecifications": {
+    "metalPurity": "Silver Finish",
+    "claspType": "Adjustable Chain",
+    "warranty": "1 Year",
+    "packaging": "Fabric Box"
+  },
+  "images": ["/images/products/prod_29_vZDIz.webp",]
+  "inStock": true,
+  "tags": ["choker", "silver", "statement", "bold"]
+},
+{
+  "name": "Necklace En01",
+  "description": "Bold choker necklace with crystal embellishments and antique finish.",
+  "price": 3999,
+  "currency": "INR",
+  "productType": "Jewelry",
+  "category": "Necklaces",
+  "subCategory": "Chokers",
+  "highlights": ["Crystal Detail", "Antique Style"],
+  "specifications": {
+    "material": "Oxidized Silver",
+    "weight": "22g",
+    "dimensions": "Adjustable 14-18 inches",
+    "gemstone": "Clear Crystal",
+    "careInstructions": "Store in dry place.",
+    "madeIn": "India"
+  },
+  "subSpecifications": {
+    "metalPurity": "Silver Finish",
+    "claspType": "Adjustable Chain",
+    "warranty": "1 Year",
+    "packaging": "Fabric Box"
+  },
+  "images": ["/images/products/prod_7uTn1-Eo.webp",]
+  "inStock": true,
+  "tags": ["choker", "silver", "statement", "bold"]
+},
+
+{
+  "name": "Necklace En01",
+  "description": "Bold choker necklace with crystal embellishments and antique finish.",
+  "price": 3999,
+  "currency": "INR",
+  "productType": "Jewelry",
+  "category": "Necklaces",
+  "subCategory": "Chokers",
+  "highlights": ["Crystal Detail", "Antique Style"],
+  "specifications": {
+    "material": "Oxidized Silver",
+    "weight": "22g",
+    "dimensions": "Adjustable 14-18 inches",
+    "gemstone": "Clear Crystal",
+    "careInstructions": "Store in dry place.",
+    "madeIn": "India"
+  },
+  "subSpecifications": {
+    "metalPurity": "Silver Finish",
+    "claspType": "Adjustable Chain",
+    "warranty": "1 Year",
+    "packaging": "Fabric Box"
+  },
+  "images": ["/images/products/prod_8yepuc_z.webp",]
+  "inStock": true,
+  "tags": ["choker", "silver", "statement", "bold"]
+},
+{
+  "name": "Necklace En01",
+  "description": "Bold choker necklace with crystal embellishments and antique finish.",
+  "price": 3999,
+  "currency": "INR",
+  "productType": "Jewelry",
+  "category": "Necklaces",
+  "subCategory": "Chokers",
+  "highlights": ["Crystal Detail", "Antique Style"],
+  "specifications": {
+    "material": "Oxidized Silver",
+    "weight": "22g",
+    "dimensions": "Adjustable 14-18 inches",
+    "gemstone": "Clear Crystal",
+    "careInstructions": "Store in dry place.",
+    "madeIn": "India"
+  },
+  "subSpecifications": {
+    "metalPurity": "Silver Finish",
+    "claspType": "Adjustable Chain",
+    "warranty": "1 Year",
+    "packaging": "Fabric Box"
+  },
+  "images": ["/images/products/prod_9EaQ0sRh.webp",]
+  "inStock": true,
+  "tags": ["choker", "silver", "statement", "bold"]
+},
+
+{
+  "name": "Necklace En01",
+  "description": "Bold choker necklace with crystal embellishments and antique finish.",
+  "price": 3999,
+  "currency": "INR",
+  "productType": "Jewelry",
+  "category": "Necklaces",
+  "subCategory": "Chokers",
+  "highlights": ["Crystal Detail", "Antique Style"],
+  "specifications": {
+    "material": "Oxidized Silver",
+    "weight": "22g",
+    "dimensions": "Adjustable 14-18 inches",
+    "gemstone": "Clear Crystal",
+    "careInstructions": "Store in dry place.",
+    "madeIn": "India"
+  },
+  "subSpecifications": {
+    "metalPurity": "Silver Finish",
+    "claspType": "Adjustable Chain",
+    "warranty": "1 Year",
+    "packaging": "Fabric Box"
+  },
+  "images": ["/images/products/prod_B6G9fkjl.webp",]
+  "inStock": true,
+  "tags": ["choker", "silver", "statement", "bold"]
+},
+
+{
+  "name": "Necklace En01",
+  "description": "Bold choker necklace with crystal embellishments and antique finish.",
+  "price": 3999,
+  "currency": "INR",
+  "productType": "Jewelry",
+  "category": "Necklaces",
+  "subCategory": "Chokers",
+  "highlights": ["Crystal Detail", "Antique Style"],
+  "specifications": {
+    "material": "Oxidized Silver",
+    "weight": "22g",
+    "dimensions": "Adjustable 14-18 inches",
+    "gemstone": "Clear Crystal",
+    "careInstructions": "Store in dry place.",
+    "madeIn": "India"
+  },
+  "subSpecifications": {
+    "metalPurity": "Silver Finish",
+    "claspType": "Adjustable Chain",
+    "warranty": "1 Year",
+    "packaging": "Fabric Box"
+  },
+  "images": ["/images/products/prod_c87MXymR.webp",]
+  "inStock": true,
+  "tags": ["choker", "silver", "statement", "bold"]
+},
+{
+  "name": "Necklace En01",
+  "description": "Bold choker necklace with crystal embellishments and antique finish.",
+  "price": 3999,
+  "currency": "INR",
+  "productType": "Jewelry",
+  "category": "Necklaces",
+  "subCategory": "Chokers",
+  "highlights": ["Crystal Detail", "Antique Style"],
+  "specifications": {
+    "material": "Oxidized Silver",
+    "weight": "22g",
+    "dimensions": "Adjustable 14-18 inches",
+    "gemstone": "Clear Crystal",
+    "careInstructions": "Store in dry place.",
+    "madeIn": "India"
+  },
+  "subSpecifications": {
+    "metalPurity": "Silver Finish",
+    "claspType": "Adjustable Chain",
+    "warranty": "1 Year",
+    "packaging": "Fabric Box"
+  },
+  "images": ["/images/products/prod_Ekhb6YYf.webp",]
+  "inStock": true,
+  "tags": ["choker", "silver", "statement", "bold"]
+},
+
+{
+  "name": "Necklace En01",
+  "description": "Bold choker necklace with crystal embellishments and antique finish.",
+  "price": 3999,
+  "currency": "INR",
+  "productType": "Jewelry",
+  "category": "Necklaces",
+  "subCategory": "Chokers",
+  "highlights": ["Crystal Detail", "Antique Style"],
+  "specifications": {
+    "material": "Oxidized Silver",
+    "weight": "22g",
+    "dimensions": "Adjustable 14-18 inches",
+    "gemstone": "Clear Crystal",
+    "careInstructions": "Store in dry place.",
+    "madeIn": "India"
+  },
+  "subSpecifications": {
+    "metalPurity": "Silver Finish",
+    "claspType": "Adjustable Chain",
+    "warranty": "1 Year",
+    "packaging": "Fabric Box"
+  },
+  "images": ["/images/products/prod_FIiB2JhT.webp",]
+  "inStock": true,
+  "tags": ["choker", "silver", "statement", "bold"]
+},
+{
+  "name": "Necklace En01",
+  "description": "Bold choker necklace with crystal embellishments and antique finish.",
+  "price": 3999,
+  "currency": "INR",
+  "productType": "Jewelry",
+  "category": "Necklaces",
+  "subCategory": "Chokers",
+  "highlights": ["Crystal Detail", "Antique Style"],
+  "specifications": {
+    "material": "Oxidized Silver",
+    "weight": "22g",
+    "dimensions": "Adjustable 14-18 inches",
+    "gemstone": "Clear Crystal",
+    "careInstructions": "Store in dry place.",
+    "madeIn": "India"
+  },
+  "subSpecifications": {
+    "metalPurity": "Silver Finish",
+    "claspType": "Adjustable Chain",
+    "warranty": "1 Year",
+    "packaging": "Fabric Box"
+  },
+  "images": ["/images/products/prod_iTgwRkXT.webp",]
+  "inStock": true,
+  "tags": ["choker", "silver", "statement", "bold"]
+},
+//
+{
+  "name": "Necklace En01",
+  "description": "Bold choker necklace with crystal embellishments and antique finish.",
+  "price": 3999,
+  "currency": "INR",
+  "productType": "Jewelry",
+  "category": "Necklaces",
+  "subCategory": "Chokers",
+  "highlights": ["Crystal Detail", "Antique Style"],
+  "specifications": {
+    "material": "Oxidized Silver",
+    "weight": "22g",
+    "dimensions": "Adjustable 14-18 inches",
+    "gemstone": "Clear Crystal",
+    "careInstructions": "Store in dry place.",
+    "madeIn": "India"
+  },
+  "subSpecifications": {
+    "metalPurity": "Silver Finish",
+    "claspType": "Adjustable Chain",
+    "warranty": "1 Year",
+    "packaging": "Fabric Box"
+  },
+  "images": ["/images/products/prod_iTgwRkXT.webp",]
+  "inStock": true,
+  "tags": ["choker", "silver", "statement", "bold"]
+},
+
+{
+  "name": "Necklace En01",
+  "description": "Bold choker necklace with crystal embellishments and antique finish.",
+  "price": 3999,
+  "currency": "INR",
+  "productType": "Jewelry",
+  "category": "Necklaces",
+  "subCategory": "Chokers",
+  "highlights": ["Crystal Detail", "Antique Style"],
+  "specifications": {
+    "material": "Oxidized Silver",
+    "weight": "22g",
+    "dimensions": "Adjustable 14-18 inches",
+    "gemstone": "Clear Crystal",
+    "careInstructions": "Store in dry place.",
+    "madeIn": "India"
+  },
+  "subSpecifications": {
+    "metalPurity": "Silver Finish",
+    "claspType": "Adjustable Chain",
+    "warranty": "1 Year",
+    "packaging": "Fabric Box"
+  },
+  "images": ["/images/products/prod_JiBJm51f.webp",]
+  "inStock": true,
+  "tags": ["choker", "silver", "statement", "bold"]
+},
+{
+  "name": "Necklace En01",
+  "description": "Bold choker necklace with crystal embellishments and antique finish.",
+  "price": 3999,
+  "currency": "INR",
+  "productType": "Jewelry",
+  "category": "Necklaces",
+  "subCategory": "Chokers",
+  "highlights": ["Crystal Detail", "Antique Style"],
+  "specifications": {
+    "material": "Oxidized Silver",
+    "weight": "22g",
+    "dimensions": "Adjustable 14-18 inches",
+    "gemstone": "Clear Crystal",
+    "careInstructions": "Store in dry place.",
+    "madeIn": "India"
+  },
+  "subSpecifications": {
+    "metalPurity": "Silver Finish",
+    "claspType": "Adjustable Chain",
+    "warranty": "1 Year",
+    "packaging": "Fabric Box"
+  },
+  "images": ["/images/products/prod_kf56arWI.webp",]
+  "inStock": true,
+  "tags": ["choker", "silver", "statement", "bold"]
+},
+
+{
+  "name": "Necklace En01",
+  "description": "Bold choker necklace with crystal embellishments and antique finish.",
+  "price": 3999,
+  "currency": "INR",
+  "productType": "Jewelry",
+  "category": "Necklaces",
+  "subCategory": "Chokers",
+  "highlights": ["Crystal Detail", "Antique Style"],
+  "specifications": {
+    "material": "Oxidized Silver",
+    "weight": "22g",
+    "dimensions": "Adjustable 14-18 inches",
+    "gemstone": "Clear Crystal",
+    "careInstructions": "Store in dry place.",
+    "madeIn": "India"
+  },
+  "subSpecifications": {
+    "metalPurity": "Silver Finish",
+    "claspType": "Adjustable Chain",
+    "warranty": "1 Year",
+    "packaging": "Fabric Box"
+  },
+  "images": ["/images/products/prod_kHNecozr.webp",]
+  "inStock": true,
+  "tags": ["choker", "silver", "statement", "bold"]
+},
+{
+  "name": "Necklace En01",
+  "description": "Bold choker necklace with crystal embellishments and antique finish.",
+  "price": 3999,
+  "currency": "INR",
+  "productType": "Jewelry",
+  "category": "Necklaces",
+  "subCategory": "Chokers",
+  "highlights": ["Crystal Detail", "Antique Style"],
+  "specifications": {
+    "material": "Oxidized Silver",
+    "weight": "22g",
+    "dimensions": "Adjustable 14-18 inches",
+    "gemstone": "Clear Crystal",
+    "careInstructions": "Store in dry place.",
+    "madeIn": "India"
+  },
+  "subSpecifications": {
+    "metalPurity": "Silver Finish",
+    "claspType": "Adjustable Chain",
+    "warranty": "1 Year",
+    "packaging": "Fabric Box"
+  },
+  "images": ["/images/products/prod_lqTAAzd_.webp",]
+  "inStock": true,
+  "tags": ["choker", "silver", "statement", "bold"]
+},
+
+{
+  "name": "Necklace En01",
+  "description": "Bold choker necklace with crystal embellishments and antique finish.",
+  "price": 3999,
+  "currency": "INR",
+  "productType": "Jewelry",
+  "category": "Necklaces",
+  "subCategory": "Chokers",
+  "highlights": ["Crystal Detail", "Antique Style"],
+  "specifications": {
+    "material": "Oxidized Silver",
+    "weight": "22g",
+    "dimensions": "Adjustable 14-18 inches",
+    "gemstone": "Clear Crystal",
+    "careInstructions": "Store in dry place.",
+    "madeIn": "India"
+  },
+  "subSpecifications": {
+    "metalPurity": "Silver Finish",
+    "claspType": "Adjustable Chain",
+    "warranty": "1 Year",
+    "packaging": "Fabric Box"
+  },
+  "images": ["/images/products/prod_oNC_eYe0.webp",]
+  "inStock": true,
+  "tags": ["choker", "silver", "statement", "bold"]
+},
+
+{
+  "name": "Necklace En01",
+  "description": "Bold choker necklace with crystal embellishments and antique finish.",
+  "price": 3999,
+  "currency": "INR",
+  "productType": "Jewelry",
+  "category": "Necklaces",
+  "subCategory": "Chokers",
+  "highlights": ["Crystal Detail", "Antique Style"],
+  "specifications": {
+    "material": "Oxidized Silver",
+    "weight": "22g",
+    "dimensions": "Adjustable 14-18 inches",
+    "gemstone": "Clear Crystal",
+    "careInstructions": "Store in dry place.",
+    "madeIn": "India"
+  },
+  "subSpecifications": {
+    "metalPurity": "Silver Finish",
+    "claspType": "Adjustable Chain",
+    "warranty": "1 Year",
+    "packaging": "Fabric Box"
+  },
+  "images": ["/images/products/prod_PlTU06fM.webp",]
+  "inStock": true,
+  "tags": ["choker", "silver", "statement", "bold"]
+},
+{
+  "name": "Necklace En01",
+  "description": "Bold choker necklace with crystal embellishments and antique finish.",
+  "price": 3999,
+  "currency": "INR",
+  "productType": "Jewelry",
+  "category": "Necklaces",
+  "subCategory": "Chokers",
+  "highlights": ["Crystal Detail", "Antique Style"],
+  "specifications": {
+    "material": "Oxidized Silver",
+    "weight": "22g",
+    "dimensions": "Adjustable 14-18 inches",
+    "gemstone": "Clear Crystal",
+    "careInstructions": "Store in dry place.",
+    "madeIn": "India"
+  },
+  "subSpecifications": {
+    "metalPurity": "Silver Finish",
+    "claspType": "Adjustable Chain",
+    "warranty": "1 Year",
+    "packaging": "Fabric Box"
+  },
+  "images": ["/images/products/prod_pmCepAHU.webp",]
+  "inStock": true,
+  "tags": ["choker", "silver", "statement", "bold"]
+},
+
+{
+  "name": "Necklace En01",
+  "description": "Bold choker necklace with crystal embellishments and antique finish.",
+  "price": 3999,
+  "currency": "INR",
+  "productType": "Jewelry",
+  "category": "Necklaces",
+  "subCategory": "Chokers",
+  "highlights": ["Crystal Detail", "Antique Style"],
+  "specifications": {
+    "material": "Oxidized Silver",
+    "weight": "22g",
+    "dimensions": "Adjustable 14-18 inches",
+    "gemstone": "Clear Crystal",
+    "careInstructions": "Store in dry place.",
+    "madeIn": "India"
+  },
+  "subSpecifications": {
+    "metalPurity": "Silver Finish",
+    "claspType": "Adjustable Chain",
+    "warranty": "1 Year",
+    "packaging": "Fabric Box"
+  },
+  "images": ["/images/products/prod_rRXkj2e0.webp",]
+  "inStock": true,
+  "tags": ["choker", "silver", "statement", "bold"]
+},
+{
+  "name": "Necklace En01",
+  "description": "Bold choker necklace with crystal embellishments and antique finish.",
+  "price": 3999,
+  "currency": "INR",
+  "productType": "Jewelry",
+  "category": "Necklaces",
+  "subCategory": "Chokers",
+  "highlights": ["Crystal Detail", "Antique Style"],
+  "specifications": {
+    "material": "Oxidized Silver",
+    "weight": "22g",
+    "dimensions": "Adjustable 14-18 inches",
+    "gemstone": "Clear Crystal",
+    "careInstructions": "Store in dry place.",
+    "madeIn": "India"
+  },
+  "subSpecifications": {
+    "metalPurity": "Silver Finish",
+    "claspType": "Adjustable Chain",
+    "warranty": "1 Year",
+    "packaging": "Fabric Box"
+  },
+  "images": ["/images/products/prod_UFyLeA9g.webp",]
+  "inStock": true,
+  "tags": ["choker", "silver", "statement", "bold"]
+},
+//.
+{
+  "name": "Necklace En01",
+  "description": "Bold choker necklace with crystal embellishments and antique finish.",
+  "price": 3999,
+  "currency": "INR",
+  "productType": "Jewelry",
+  "category": "Necklaces",
+  "subCategory": "Chokers",
+  "highlights": ["Crystal Detail", "Antique Style"],
+  "specifications": {
+    "material": "Oxidized Silver",
+    "weight": "22g",
+    "dimensions": "Adjustable 14-18 inches",
+    "gemstone": "Clear Crystal",
+    "careInstructions": "Store in dry place.",
+    "madeIn": "India"
+  },
+  "subSpecifications": {
+    "metalPurity": "Silver Finish",
+    "claspType": "Adjustable Chain",
+    "warranty": "1 Year",
+    "packaging": "Fabric Box"
+  },
+  "images": ["/images/products/prod_xKKwWhhV.webp",]
+  "inStock": true,
+  "tags": ["choker", "silver", "statement", "bold"]
+},
+
+{
+  "name": "Necklace En01",
+  "description": "Bold choker necklace with crystal embellishments and antique finish.",
+  "price": 3999,
+  "currency": "INR",
+  "productType": "Jewelry",
+  "category": "Necklaces",
+  "subCategory": "Chokers",
+  "highlights": ["Crystal Detail", "Antique Style"],
+  "specifications": {
+    "material": "Oxidized Silver",
+    "weight": "22g",
+    "dimensions": "Adjustable 14-18 inches",
+    "gemstone": "Clear Crystal",
+    "careInstructions": "Store in dry place.",
+    "madeIn": "India"
+  },
+  "subSpecifications": {
+    "metalPurity": "Silver Finish",
+    "claspType": "Adjustable Chain",
+    "warranty": "1 Year",
+    "packaging": "Fabric Box"
+  },
+  "images": ["/images/products/prod_Y-oRAXsI.webp",]
+  "inStock": true,
+  "tags": ["choker", "silver", "statement", "bold"]
+},
+{
+  "name": "Necklace En01",
+  "description": "Bold choker necklace with crystal embellishments and antique finish.",
+  "price": 3999,
+  "currency": "INR",
+  "productType": "Jewelry",
+  "category": "Necklaces",
+  "subCategory": "Chokers",
+  "highlights": ["Crystal Detail", "Antique Style"],
+  "specifications": {
+    "material": "Oxidized Silver",
+    "weight": "22g",
+    "dimensions": "Adjustable 14-18 inches",
+    "gemstone": "Clear Crystal",
+    "careInstructions": "Store in dry place.",
+    "madeIn": "India"
+  },
+  "subSpecifications": {
+    "metalPurity": "Silver Finish",
+    "claspType": "Adjustable Chain",
+    "warranty": "1 Year",
+    "packaging": "Fabric Box"
+  },
+  "images": ["/images/products/prod_0ccySAkc.webp",]
+  "inStock": true,
+  "tags": ["choker", "silver", "statement", "bold"]
+},
+
+{
+  "name": "Necklace En01",
+  "description": "Bold choker necklace with crystal embellishments and antique finish.",
+  "price": 3999,
+  "currency": "INR",
+  "productType": "Jewelry",
+  "category": "Necklaces",
+  "subCategory": "Chokers",
+  "highlights": ["Crystal Detail", "Antique Style"],
+  "specifications": {
+    "material": "Oxidized Silver",
+    "weight": "22g",
+    "dimensions": "Adjustable 14-18 inches",
+    "gemstone": "Clear Crystal",
+    "careInstructions": "Store in dry place.",
+    "madeIn": "India"
+  },
+  "subSpecifications": {
+    "metalPurity": "Silver Finish",
+    "claspType": "Adjustable Chain",
+    "warranty": "1 Year",
+    "packaging": "Fabric Box"
+  },
+  "images": ["/images/products/prod_0InzJDmz.webp",]
+  "inStock": true,
+  "tags": ["choker", "silver", "statement", "bold"]
+},
+{
+  "name": "Necklace En01",
+  "description": "Bold choker necklace with crystal embellishments and antique finish.",
+  "price": 3999,
+  "currency": "INR",
+  "productType": "Jewelry",
+  "category": "Necklaces",
+  "subCategory": "Chokers",
+  "highlights": ["Crystal Detail", "Antique Style"],
+  "specifications": {
+    "material": "Oxidized Silver",
+    "weight": "22g",
+    "dimensions": "Adjustable 14-18 inches",
+    "gemstone": "Clear Crystal",
+    "careInstructions": "Store in dry place.",
+    "madeIn": "India"
+  },
+  "subSpecifications": {
+    "metalPurity": "Silver Finish",
+    "claspType": "Adjustable Chain",
+    "warranty": "1 Year",
+    "packaging": "Fabric Box"
+  },
+  "images": ["/images/products/prod_0tZeNfew.webp",]
+  "inStock": true,
+  "tags": ["choker", "silver", "statement", "bold"]
+},
+
+{
+  "name": "Necklace En01",
+  "description": "Bold choker necklace with crystal embellishments and antique finish.",
+  "price": 3999,
+  "currency": "INR",
+  "productType": "Jewelry",
+  "category": "Necklaces",
+  "subCategory": "Chokers",
+  "highlights": ["Crystal Detail", "Antique Style"],
+  "specifications": {
+    "material": "Oxidized Silver",
+    "weight": "22g",
+    "dimensions": "Adjustable 14-18 inches",
+    "gemstone": "Clear Crystal",
+    "careInstructions": "Store in dry place.",
+    "madeIn": "India"
+  },
+  "subSpecifications": {
+    "metalPurity": "Silver Finish",
+    "claspType": "Adjustable Chain",
+    "warranty": "1 Year",
+    "packaging": "Fabric Box"
+  },
+  "images": ["/images/products/prod_1-10fNHz.webp",]
+  "inStock": true,
+  "tags": ["choker", "silver", "statement", "bold"]
+},
+
+{
+  "name": "Necklace En01",
+  "description": "Bold choker necklace with crystal embellishments and antique finish.",
+  "price": 3999,
+  "currency": "INR",
+  "productType": "Jewelry",
+  "category": "Necklaces",
+  "subCategory": "Chokers",
+  "highlights": ["Crystal Detail", "Antique Style"],
+  "specifications": {
+    "material": "Oxidized Silver",
+    "weight": "22g",
+    "dimensions": "Adjustable 14-18 inches",
+    "gemstone": "Clear Crystal",
+    "careInstructions": "Store in dry place.",
+    "madeIn": "India"
+  },
+  "subSpecifications": {
+    "metalPurity": "Silver Finish",
+    "claspType": "Adjustable Chain",
+    "warranty": "1 Year",
+    "packaging": "Fabric Box"
+  },
+  "images": ["/images/products/prod_1EQUjP5D.webp",]
+  "inStock": true,
+  "tags": ["choker", "silver", "statement", "bold"]
+},
+{
+  "name": "Necklace En01",
+  "description": "Bold choker necklace with crystal embellishments and antique finish.",
+  "price": 3999,
+  "currency": "INR",
+  "productType": "Jewelry",
+  "category": "Necklaces",
+  "subCategory": "Chokers",
+  "highlights": ["Crystal Detail", "Antique Style"],
+  "specifications": {
+    "material": "Oxidized Silver",
+    "weight": "22g",
+    "dimensions": "Adjustable 14-18 inches",
+    "gemstone": "Clear Crystal",
+    "careInstructions": "Store in dry place.",
+    "madeIn": "India"
+  },
+  "subSpecifications": {
+    "metalPurity": "Silver Finish",
+    "claspType": "Adjustable Chain",
+    "warranty": "1 Year",
+    "packaging": "Fabric Box"
+  },
+  "images": ["/images/products/prod_1lY8kySa.webp",]
+  "inStock": true,
+  "tags": ["choker", "silver", "statement", "bold"]
+},
+
+{
+  "name": "Necklace En01",
+  "description": "Bold choker necklace with crystal embellishments and antique finish.",
+  "price": 3999,
+  "currency": "INR",
+  "productType": "Jewelry",
+  "category": "Necklaces",
+  "subCategory": "Chokers",
+  "highlights": ["Crystal Detail", "Antique Style"],
+  "specifications": {
+    "material": "Oxidized Silver",
+    "weight": "22g",
+    "dimensions": "Adjustable 14-18 inches",
+    "gemstone": "Clear Crystal",
+    "careInstructions": "Store in dry place.",
+    "madeIn": "India"
+  },
+  "subSpecifications": {
+    "metalPurity": "Silver Finish",
+    "claspType": "Adjustable Chain",
+    "warranty": "1 Year",
+    "packaging": "Fabric Box"
+  },
+  "images": ["/images/products/prod_4c4z6-QR.webp",]
+  "inStock": true,
+  "tags": ["choker", "silver", "statement", "bold"]
+},
+{
+  "name": "Necklace En01",
+  "description": "Bold choker necklace with crystal embellishments and antique finish.",
+  "price": 3999,
+  "currency": "INR",
+  "productType": "Jewelry",
+  "category": "Necklaces",
+  "subCategory": "Chokers",
+  "highlights": ["Crystal Detail", "Antique Style"],
+  "specifications": {
+    "material": "Oxidized Silver",
+    "weight": "22g",
+    "dimensions": "Adjustable 14-18 inches",
+    "gemstone": "Clear Crystal",
+    "careInstructions": "Store in dry place.",
+    "madeIn": "India"
+  },
+  "subSpecifications": {
+    "metalPurity": "Silver Finish",
+    "claspType": "Adjustable Chain",
+    "warranty": "1 Year",
+    "packaging": "Fabric Box"
+  },
+  "images": ["/images/products/prod_4jEKGotg.webp",]
+  "inStock": true,
+  "tags": ["choker", "silver", "statement", "bold"]
+},
+//
+{
+  "name": "Necklace En01",
+  "description": "Bold choker necklace with crystal embellishments and antique finish.",
+  "price": 3999,
+  "currency": "INR",
+  "productType": "Jewelry",
+  "category": "Necklaces",
+  "subCategory": "Chokers",
+  "highlights": ["Crystal Detail", "Antique Style"],
+  "specifications": {
+    "material": "Oxidized Silver",
+    "weight": "22g",
+    "dimensions": "Adjustable 14-18 inches",
+    "gemstone": "Clear Crystal",
+    "careInstructions": "Store in dry place.",
+    "madeIn": "India"
+  },
+  "subSpecifications": {
+    "metalPurity": "Silver Finish",
+    "claspType": "Adjustable Chain",
+    "warranty": "1 Year",
+    "packaging": "Fabric Box"
+  },
+  "images": ["/images/products/prod_5operta1.webp",]
+  "inStock": true,
+  "tags": ["choker", "silver", "statement", "bold"]
+},
+
+{
+  "name": "Necklace En01",
+  "description": "Bold choker necklace with crystal embellishments and antique finish.",
+  "price": 3999,
+  "currency": "INR",
+  "productType": "Jewelry",
+  "category": "Necklaces",
+  "subCategory": "Chokers",
+  "highlights": ["Crystal Detail", "Antique Style"],
+  "specifications": {
+    "material": "Oxidized Silver",
+    "weight": "22g",
+    "dimensions": "Adjustable 14-18 inches",
+    "gemstone": "Clear Crystal",
+    "careInstructions": "Store in dry place.",
+    "madeIn": "India"
+  },
+  "subSpecifications": {
+    "metalPurity": "Silver Finish",
+    "claspType": "Adjustable Chain",
+    "warranty": "1 Year",
+    "packaging": "Fabric Box"
+  },
+  "images": ["/images/products/prod_6UovliCu.webp",]
+  "inStock": true,
+  "tags": ["choker", "silver", "statement", "bold"]
+},
+{
+  "name": "Necklace En01",
+  "description": "Bold choker necklace with crystal embellishments and antique finish.",
+  "price": 3999,
+  "currency": "INR",
+  "productType": "Jewelry",
+  "category": "Necklaces",
+  "subCategory": "Chokers",
+  "highlights": ["Crystal Detail", "Antique Style"],
+  "specifications": {
+    "material": "Oxidized Silver",
+    "weight": "22g",
+    "dimensions": "Adjustable 14-18 inches",
+    "gemstone": "Clear Crystal",
+    "careInstructions": "Store in dry place.",
+    "madeIn": "India"
+  },
+  "subSpecifications": {
+    "metalPurity": "Silver Finish",
+    "claspType": "Adjustable Chain",
+    "warranty": "1 Year",
+    "packaging": "Fabric Box"
+  },
+  "images": ["/images/products/prod_6xlkiAKh.webp",]
+  "inStock": true,
+  "tags": ["choker", "silver", "statement", "bold"]
+},
+
+{
+  "name": "Necklace En01",
+  "description": "Bold choker necklace with crystal embellishments and antique finish.",
+  "price": 3999,
+  "currency": "INR",
+  "productType": "Jewelry",
+  "category": "Necklaces",
+  "subCategory": "Chokers",
+  "highlights": ["Crystal Detail", "Antique Style"],
+  "specifications": {
+    "material": "Oxidized Silver",
+    "weight": "22g",
+    "dimensions": "Adjustable 14-18 inches",
+    "gemstone": "Clear Crystal",
+    "careInstructions": "Store in dry place.",
+    "madeIn": "India"
+  },
+  "subSpecifications": {
+    "metalPurity": "Silver Finish",
+    "claspType": "Adjustable Chain",
+    "warranty": "1 Year",
+    "packaging": "Fabric Box"
+  },
+  "images": ["/images/products/prod_37S7bbvA.webp",]
+  "inStock": true,
+  "tags": ["choker", "silver", "statement", "bold"]
+},
+{
+  "name": "Necklace En01",
+  "description": "Bold choker necklace with crystal embellishments and antique finish.",
+  "price": 3999,
+  "currency": "INR",
+  "productType": "Jewelry",
+  "category": "Necklaces",
+  "subCategory": "Chokers",
+  "highlights": ["Crystal Detail", "Antique Style"],
+  "specifications": {
+    "material": "Oxidized Silver",
+    "weight": "22g",
+    "dimensions": "Adjustable 14-18 inches",
+    "gemstone": "Clear Crystal",
+    "careInstructions": "Store in dry place.",
+    "madeIn": "India"
+  },
+  "subSpecifications": {
+    "metalPurity": "Silver Finish",
+    "claspType": "Adjustable Chain",
+    "warranty": "1 Year",
+    "packaging": "Fabric Box"
+  },
+  "images": ["/images/products/prod_77_tuah-.webp",]
+  "inStock": true,
+  "tags": ["choker", "silver", "statement", "bold"]
+},
+
+{
+  "name": "Necklace En01",
+  "description": "Bold choker necklace with crystal embellishments and antique finish.",
+  "price": 3999,
+  "currency": "INR",
+  "productType": "Jewelry",
+  "category": "Necklaces",
+  "subCategory": "Chokers",
+  "highlights": ["Crystal Detail", "Antique Style"],
+  "specifications": {
+    "material": "Oxidized Silver",
+    "weight": "22g",
+    "dimensions": "Adjustable 14-18 inches",
+    "gemstone": "Clear Crystal",
+    "careInstructions": "Store in dry place.",
+    "madeIn": "India"
+  },
+  "subSpecifications": {
+    "metalPurity": "Silver Finish",
+    "claspType": "Adjustable Chain",
+    "warranty": "1 Year",
+    "packaging": "Fabric Box"
+  },
+  "images": ["/images/products/prod_a76E3rLN.webp",]
+  "inStock": true,
+  "tags": ["choker", "silver", "statement", "bold"]
+},
+
+{
+  "name": "Necklace En01",
+  "description": "Bold choker necklace with crystal embellishments and antique finish.",
+  "price": 3999,
+  "currency": "INR",
+  "productType": "Jewelry",
+  "category": "Necklaces",
+  "subCategory": "Chokers",
+  "highlights": ["Crystal Detail", "Antique Style"],
+  "specifications": {
+    "material": "Oxidized Silver",
+    "weight": "22g",
+    "dimensions": "Adjustable 14-18 inches",
+    "gemstone": "Clear Crystal",
+    "careInstructions": "Store in dry place.",
+    "madeIn": "India"
+  },
+  "subSpecifications": {
+    "metalPurity": "Silver Finish",
+    "claspType": "Adjustable Chain",
+    "warranty": "1 Year",
+    "packaging": "Fabric Box"
+  },
+  "images": ["/images/products/prod_amT-RZrb.webp",]
+  "inStock": true,
+  "tags": ["choker", "silver", "statement", "bold"]
+},
+{
+  "name": "Necklace En01",
+  "description": "Bold choker necklace with crystal embellishments and antique finish.",
+  "price": 3999,
+  "currency": "INR",
+  "productType": "Jewelry",
+  "category": "Necklaces",
+  "subCategory": "Chokers",
+  "highlights": ["Crystal Detail", "Antique Style"],
+  "specifications": {
+    "material": "Oxidized Silver",
+    "weight": "22g",
+    "dimensions": "Adjustable 14-18 inches",
+    "gemstone": "Clear Crystal",
+    "careInstructions": "Store in dry place.",
+    "madeIn": "India"
+  },
+  "subSpecifications": {
+    "metalPurity": "Silver Finish",
+    "claspType": "Adjustable Chain",
+    "warranty": "1 Year",
+    "packaging": "Fabric Box"
+  },
+  "images": ["/images/products/prod_apIdQ0Bz.webp",]
+  "inStock": true,
+  "tags": ["choker", "silver", "statement", "bold"]
+},
+
+{
+  "name": "Necklace En01",
+  "description": "Bold choker necklace with crystal embellishments and antique finish.",
+  "price": 3999,
+  "currency": "INR",
+  "productType": "Jewelry",
+  "category": "Necklaces",
+  "subCategory": "Chokers",
+  "highlights": ["Crystal Detail", "Antique Style"],
+  "specifications": {
+    "material": "Oxidized Silver",
+    "weight": "22g",
+    "dimensions": "Adjustable 14-18 inches",
+    "gemstone": "Clear Crystal",
+    "careInstructions": "Store in dry place.",
+    "madeIn": "India"
+  },
+  "subSpecifications": {
+    "metalPurity": "Silver Finish",
+    "claspType": "Adjustable Chain",
+    "warranty": "1 Year",
+    "packaging": "Fabric Box"
+  },
+  "images": ["/images/products/prod_AURS-_-I.webp",]
+  "inStock": true,
+  "tags": ["choker", "silver", "statement", "bold"]
+},
+{
+  "name": "Necklace En01",
+  "description": "Bold choker necklace with crystal embellishments and antique finish.",
+  "price": 3999,
+  "currency": "INR",
+  "productType": "Jewelry",
+  "category": "Necklaces",
+  "subCategory": "Chokers",
+  "highlights": ["Crystal Detail", "Antique Style"],
+  "specifications": {
+    "material": "Oxidized Silver",
+    "weight": "22g",
+    "dimensions": "Adjustable 14-18 inches",
+    "gemstone": "Clear Crystal",
+    "careInstructions": "Store in dry place.",
+    "madeIn": "India"
+  },
+  "subSpecifications": {
+    "metalPurity": "Silver Finish",
+    "claspType": "Adjustable Chain",
+    "warranty": "1 Year",
+    "packaging": "Fabric Box"
+  },
+  "images": ["/images/products/prod_AY4xUIab.webp",]
+  "inStock": true,
+  "tags": ["choker", "silver", "statement", "bold"]
+},
+//
+

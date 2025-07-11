@@ -3,28 +3,60 @@ import dbConnect from '@/lib/dbConnect';
 import Product from '@/models/Product';
 import mongoose from 'mongoose';
 
-export async function GET(
-  request: Request, // Or NextRequest if you need its extended API
-  context: { params: Promise<{ id: string }> } // Type the params as a Promise
+// UPDATE product
+export async function PUT(
+  request: Request,
+  context: { params: { id: string } }
 ) {
-  // Await the params before accessing them
-  const { id } = await context.params;
-
-  await dbConnect();
+  const { id } = context.params;
+  const body = await request.json();
 
   if (!mongoose.Types.ObjectId.isValid(id)) {
-    return NextResponse.json({ message: 'Invalid ID' }, { status: 400 });
+    return NextResponse.json({ error: 'Invalid product ID' }, { status: 400 });
   }
 
   try {
-    const product = await Product.findById(id);
-    if (!product) {
-      return NextResponse.json({ message: 'Not found' }, { status: 404 });
+    await dbConnect();
+
+    const updatedProduct = await Product.findByIdAndUpdate(id, body, {
+      new: true,
+      runValidators: true,
+    });
+
+    if (!updatedProduct) {
+      return NextResponse.json({ error: 'Product not found' }, { status: 404 });
     }
 
-    return NextResponse.json({ product }, { status: 200 });
+    return NextResponse.json({ success: true, product: updatedProduct }, { status: 200 });
   } catch (error) {
-    console.error(error);
-    return NextResponse.json({ message: 'Server error' }, { status: 500 });
+    console.error('[PRODUCT_PUT_ERROR]', error);
+    return NextResponse.json({ error: 'Failed to update product' }, { status: 500 });
+  }
+}
+
+// DELETE product
+export async function DELETE(
+  request: Request,
+  context: { params: { id: string } }
+) {
+  const { id } = context.params;
+
+  if (!mongoose.Types.ObjectId.isValid(id)) {
+    return NextResponse.json({ error: 'Invalid product ID' }, { status: 400 });
+  }
+
+  try {
+    await dbConnect();
+
+    const deletedProduct = await Product.findByIdAndDelete(id);
+
+    if (!deletedProduct) {
+      return NextResponse.json({ error: 'Product not found' }, { status: 404 });
+    }
+
+    return NextResponse.json({ success: true }, { status: 200 });
+  } catch (error) {
+    console.error('[PRODUCT_DELETE_ERROR]', error);
+    return NextResponse.json({ error: 'Failed to delete product' }, { status: 500 });
   }
 }

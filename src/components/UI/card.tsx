@@ -1,5 +1,5 @@
 import React from "react";
-import { cn } from "@/lib/utils"; // Optional utility to merge class names
+import { cn } from "@/utils/utils"; // Optional utility to merge class names
 
 interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
   children: React.ReactNode;

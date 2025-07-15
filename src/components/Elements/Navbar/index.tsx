@@ -15,9 +15,11 @@ const navLinks = [
 const brands = [
   'Necklaces', 'Bracelets', 'Earrings', 'Necklace Set with earrings', 'Brooches', 'Rings', 'Watches', 'Pendants', 'Chains', 'Anklets', 'Cufflinks', 'Charms', 'Hair Accessories', 'Body Jewelry', 'Jewelry Sets',
 ];
+const whatsappMessage = `Hello, I’m interested in  Could you please provide more details?`;
 const inquiry = () => {
-  window.location.href = 'https://wa.me/91XXXXXXXXXX?text=${encodeURIComponent(whatsappMessage)}' ;
+  window.location.href = `https://wa.me/917359709631?text=${encodeURIComponent(whatsappMessage)}`;
 };
+
 const shopnow = () => {
   window.location.href = '/shop';
 };

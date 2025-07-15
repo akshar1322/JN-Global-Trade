@@ -1,30 +1,4 @@
-{
-  "name": "Necklace En01",
-  "description": "Bold choker necklace with crystal embellishments and antique finish.",
-  "price": 3999,
-  "currency": "INR",
-  "productType": "Jewelry",
-  "category": "Necklaces",
-  "subCategory": "Chokers",
-  "highlights": ["Crystal Detail", "Antique Style"],
-  "specifications": {
-    "material": "Oxidized Silver",
-    "weight": "22g",
-    "dimensions": "Adjustable 14-18 inches",
-    "gemstone": "Clear Crystal",
-    "careInstructions": "Store in dry place.",
-    "madeIn": "India"
-  },
-  "subSpecifications": {
-    "metalPurity": "Silver Finish",
-    "claspType": "Adjustable Chain",
-    "warranty": "1 Year",
-    "packaging": "Fabric Box"
-  },
-  "images": ["/images/products/prod_4bHStoE6.webp",]
-  "inStock": true,
-  "tags": ["choker", "silver", "statement", "bold"]
-},
+
 
 {
   "name": "Necklace En01",

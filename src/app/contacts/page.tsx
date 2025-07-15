@@ -13,19 +13,10 @@ export default function ContactPage() {
     {
       name: 'Location 1',
       image: '/images/locations/prod_JgdBYOZK.webp',
-      city: 'San Francisco',
-      store: 'Dennel',
-      address: '500 Terry Francine Street, San Francisco, CA 94158',
-      phone: '123-456-7890',
-      hours: 'Monday to Friday\n10:00am - 8:00pm',
-    },
-    {
-      name: 'Location 2',
-      image: '/images/locations/prod_95R-aBOS.webp',
-      city: 'New York',
-      store: 'Dennel NYC',
-      address: '123 Manhattan Ave, New York, NY 10001',
-      phone: '987-654-3210',
+      city: 'Bhavnagar',
+      store: 'JN Global Trade',
+      address: 'Nilambag Road NR bahumali bhawan Thenewjahangir vakil millcompound',
+      phone: '+91 73597-09631',
       hours: 'Monday to Friday\n10:00am - 8:00pm',
     },
   ];

@@ -1,26 +1,17 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { notFound, useParams } from 'next/navigation';
+import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
-import {
-  MessageCircleMore,
-  Minus,
-  PhoneCall,
-  Plus,
-} from 'lucide-react';
+import { MessageCircleMore, Minus, PhoneCall, Plus } from 'lucide-react';
 import type { IProduct } from '@/models/Product';
-import Footer from '@/components/Elements/Footer';
 import Navbar from '@/components/Elements/Navbar';
-
-// Interface PageProps is no longer needed since its properties are not used
+import Footer from '@/components/Elements/Footer';
 
 async function getProduct(id: string): Promise<IProduct | null> {
   try {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/shop/${id}`, {
-      cache: 'no-store',
-    });
+    const res = await fetch(`/api/shop/${id}`, { cache: 'no-store' });
     if (!res.ok) return null;
     const data = await res.json();
     return data.product || null;
@@ -30,44 +21,29 @@ async function getProduct(id: string): Promise<IProduct | null> {
   }
 }
 
-export default function ProductPageWrapper() {
-  const params = useParams();
-  const { id } = params as { id: string };
-
+export default function Page({ params }: { params: { id: string } }) {
   const [product, setProduct] = useState<IProduct | null>(null);
   const [loading, setLoading] = useState(true);
+  const [accordionOpen, setAccordionOpen] = useState<'info' | 'return' | 'shipping' | ''>('info');
 
   useEffect(() => {
-    if (id) {
-      getProduct(id)
-        .then((data) => {
-          setProduct(data);
-          setLoading(false);
-        })
-        .catch((error) => {
-          console.error('Error in getProduct useEffect:', error);
-          setLoading(false);
-        });
-    } else {
+    getProduct(params.id).then((data) => {
+      setProduct(data);
       setLoading(false);
-      notFound();
-    }
-  }, [id]);
+    });
+  }, [params.id]);
 
   if (loading) return <div className="p-10 text-center">Loading product...</div>;
   if (!product) return notFound();
 
-  const { name, description, price, currency, images } = product;
-
+  const { name, description, price, currency, images, } = product;
   const whatsappMessage = `Hello, I’m interested in "${name}". Could you please provide more details?`;
-  const whatsappURL = `https://wa.me/91XXXXXXXXXX?text=${encodeURIComponent(whatsappMessage)}`;
+  const whatsappURL = `https://wa.me/917359709631?text=${encodeURIComponent(whatsappMessage)}`;
   const emailURL = `/inquiry?product=${encodeURIComponent(name)}`;
 
   return (
     <>
-      <header>
-        <Navbar />
-      </header>
+      <Navbar />
 
       <main className="bg-white max-w-full mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-2 gap-10">
         <ImagesSection images={images} name={name} />
@@ -81,24 +57,13 @@ export default function ProductPageWrapper() {
           <div className="flex items-center space-x-4 mb-6">
             <span className="text-lg font-medium">Quantity:</span>
             <div className="flex items-center border rounded-md">
-              <button className="p-2">
-                <Minus size={20} />
-              </button>
-              <input
-                type="number"
-                min="1"
-                defaultValue="1"
-                className="w-16 text-center border-l border-r py-1 px-2"
-              />
-              <button className="p-2">
-                <Plus size={20} />
-              </button>
+              <button className="p-2"><Minus size={20} /></button>
+              <input type="number" min="1" defaultValue="1" className="w-16 text-center border-l border-r py-1 px-2" />
+              <button className="p-2"><Plus size={20} /></button>
             </div>
           </div>
 
-          <button className="bg-blue-600 text-white px-6 py-3 rounded-md text-lg font-medium hover:bg-blue-700 transition duration-300">
-            Add to Cart
-          </button>
+          <p className="text-gray-600 mb-6">For inquiries, you can contact us via WhatsApp or email.</p>
 
           <div className="mt-8 flex items-center space-x-6">
             <Link href={whatsappURL} target="_blank" rel="noopener noreferrer" className="text-green-500 hover:text-green-600">
@@ -108,6 +73,50 @@ export default function ProductPageWrapper() {
               <MessageCircleMore size={24} />
             </Link>
           </div>
+
+          {/* Accordion Section Starts */}
+          <div className="mt-10 divide-y max-w-xl">
+            {/* Product Info */}
+            <div className="py-4 cursor-pointer" onClick={() => setAccordionOpen(accordionOpen === 'info' ? '' : 'info')}>
+              <div className="flex justify-between items-center">
+                <h3 className="text-lg font-medium">Product info</h3>
+                <span>{accordionOpen === 'info' ? '−' : '+'}</span>
+              </div>
+              {accordionOpen === 'info' && (
+                <p className="mt-2 text-gray-600">
+                  { description || "No additional product info available."}
+                </p>
+              )}
+            </div>
+
+            {/* Return & Refund Policy */}
+            <div className="py-4 cursor-pointer" onClick={() => setAccordionOpen(accordionOpen === 'return' ? '' : 'return')}>
+              <div className="flex justify-between items-center">
+                <h3 className="text-lg font-medium">Return & refund policy</h3>
+                <span>{accordionOpen === 'return' ? '−' : '+'}</span>
+              </div>
+              {accordionOpen === 'return' && (
+                <p className="mt-2 text-gray-600">
+                  Items can be returned within 7 days of delivery. The item must be unused and in original condition. Refunds will be processed within 5–7 business days.
+                </p>
+              )}
+            </div>
+
+            {/* Shipping Info */}
+            <div className="py-4 cursor-pointer" onClick={() => setAccordionOpen(accordionOpen === 'shipping' ? '' : 'shipping')}>
+              <div className="flex justify-between items-center">
+                <h3 className="text-lg font-medium">Shipping info</h3>
+                <span>{accordionOpen === 'shipping' ? '−' : '+'}</span>
+              </div>
+              {accordionOpen === 'shipping' && (
+                <p className="mt-2 text-gray-600">
+                  We offer free shipping across India. Orders are typically delivered within 5–10 business days. You will receive tracking details once your order is shipped.
+                </p>
+              )}
+            </div>
+          </div>
+          {/* Accordion Section Ends */}
+
         </div>
       </main>
 

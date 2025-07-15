@@ -1,30 +1,35 @@
 import { NextResponse } from 'next/server';
-import dbConnect from '@/lib/dbConnect';
+import { Types } from 'mongoose';
+import connectDB from '@/lib/dbConnect';
 import Product from '@/models/Product';
-import mongoose from 'mongoose';
 
-export async function GET(
-  request: Request, // Or NextRequest if you need its extended API
-  context: { params: Promise<{ id: string }> } // Type the params as a Promise
-) {
-  // Await the params before accessing them
-  const { id } = await context.params;
+export async function GET(req: Request, { params }: { params: { id: string } }) {
+  await connectDB();
 
-  await dbConnect();
+  const { id } = params;
 
-  if (!mongoose.Types.ObjectId.isValid(id)) {
-    return NextResponse.json({ message: 'Invalid ID' }, { status: 400 });
+  // Validate MongoDB ObjectId
+  if (!Types.ObjectId.isValid(id)) {
+    return NextResponse.json({ message: 'Invalid product ID format' }, { status: 400 });
   }
 
   try {
     const product = await Product.findById(id);
+
     if (!product) {
-      return NextResponse.json({ message: 'Not found' }, { status: 404 });
+      return NextResponse.json({ message: 'Product not found' }, { status: 404 });
     }
 
-    return NextResponse.json({ product }, { status: 200 });
+    return NextResponse.json({ product }, {
+      status: 200,
+      headers: { 'Content-Type': 'application/json' }
+    });
+
   } catch (error) {
-    console.error(error);
-    return NextResponse.json({ message: 'Server error' }, { status: 500 });
+    console.error('Error fetching product:', error);
+    return NextResponse.json({
+      message: 'Server error while fetching product',
+      error: (error as Error).message || 'Unknown error'
+    }, { status: 500 });
   }
 }

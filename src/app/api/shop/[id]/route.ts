@@ -1,15 +1,17 @@
-import { NextResponse } from 'next/server';
+import { NextResponse, NextRequest } from 'next/server';
 import { Types } from 'mongoose';
 import connectDB from '@/lib/dbConnect';
 import Product from '@/models/Product';
 
-export async function GET(req: Request, { params }: { params: { id: string } }) {
+// Handles GET /api/shop/[id]
+export async function GET(req: NextRequest) {
   await connectDB();
 
-  const { id } = params;
+  // Extract the id from the dynamic pathname
+  const id = req.nextUrl.pathname.split('/').pop();
 
-  // Validate MongoDB ObjectId
-  if (!Types.ObjectId.isValid(id)) {
+  // Validate the ObjectId
+  if (!id || !Types.ObjectId.isValid(id)) {
     return NextResponse.json({ message: 'Invalid product ID format' }, { status: 400 });
   }
 

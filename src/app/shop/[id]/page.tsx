@@ -7,6 +7,8 @@ import Footer from '@/components/Elements/Footer';
 import Accordion from '@/components/share/Accordion';
 import { getProduct } from '@/lib/getProduct';
 
+// Ensure there are no conflicting global PageProps types.
+// The type annotation for 'Page' function is already correct for Next.js App Router.
 export default async function Page({ params }: { params: { id: string } }) {
   const product = await getProduct(params.id);
 

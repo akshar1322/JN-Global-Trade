@@ -1,29 +1,14 @@
-// ✅ Must be the first line in the file
-"use client";
+// ❌ Don't include "use client" here
 
-import React, { useState } from 'react';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
-import { MessageCircleMore, Minus, PhoneCall, Plus } from 'lucide-react';
-import type { IProduct } from '@/models/Product';
+import { MessageCircleMore, PhoneCall } from 'lucide-react';
 import Navbar from '@/components/Elements/Navbar';
 import Footer from '@/components/Elements/Footer';
-
-
-async function getProduct(id: string): Promise<IProduct | null> {
-  try {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/shop/${id}`, {
-      cache: 'no-store',
-    });
-    if (!res.ok) return null;
-    const data = await res.json();
-    return data.product || null;
-  } catch (error) {
-    console.error('Error fetching product:', error);
-    return null;
-  }
-}
+import Accordion from '@/components/share/Accordion'; // client component
+import { getProduct } from '@/lib/getProduct';
+import type { IProduct } from '@/models/Product';
 
 export default async function Page({ params }: { params: { id: string } }) {
   const product = await getProduct(params.id);
@@ -44,39 +29,13 @@ export default async function Page({ params }: { params: { id: string } }) {
 
         <div>
           <h1 className="text-3xl text-gray-800 font-semibold mb-2">{name}</h1>
-          <p className="text-xl text-gray-800 mb-4">
-            {currency} {price}
-          </p>
-
+          <p className="text-xl text-gray-800 mb-4">{currency} {price}</p>
           <p className="text-gray-700 mb-4">{description}</p>
-
-          <div className="flex items-center space-x-4 mb-6">
-            <span className="text-lg font-medium">Quantity:</span>
-            <div className="flex items-center border rounded-md">
-              <button className="p-2">
-                <Minus size={20} />
-              </button>
-              <input
-                type="number"
-                min="1"
-                defaultValue="1"
-                className="w-16 text-center border-l border-r py-1 px-2"
-              />
-              <button className="p-2">
-                <Plus size={20} />
-              </button>
-            </div>
-          </div>
 
           <p className="text-gray-600 mb-6">For inquiries, you can contact us via WhatsApp or email.</p>
 
           <div className="mt-8 flex items-center space-x-6">
-            <Link
-              href={whatsappURL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-green-500 hover:text-green-600"
-            >
+            <Link href={whatsappURL} target="_blank" rel="noopener noreferrer" className="text-green-500 hover:text-green-600">
               <PhoneCall size={24} />
             </Link>
             <Link href={emailURL} className="text-blue-500 hover:text-blue-600">
@@ -84,11 +43,10 @@ export default async function Page({ params }: { params: { id: string } }) {
             </Link>
           </div>
 
-          {/* Accordion Section Starts */}
           <div className="mt-10 divide-y max-w-xl">
             <Accordion title="Product info" content={description || "No additional product info available."} />
-            <Accordion title="Return & refund policy" content="Items can be returned within 7 days of delivery. The item must be unused and in original condition. Refunds will be processed within 5–7 business days." />
-            <Accordion title="Shipping info" content="We offer free shipping across India. Orders are typically delivered within 5–10 business days. You will receive tracking details once your order is shipped." />
+            <Accordion title="Return & refund policy" content="Items can be returned within 7 days..." />
+            <Accordion title="Shipping info" content="We offer free shipping across India..." />
           </div>
         </div>
       </main>
@@ -112,19 +70,6 @@ function ImagesSection({ images, name }: { images: string[]; name: string }) {
           className="rounded-md"
         />
       </div>
-    </div>
-  );
-}
-
-function Accordion({ title, content }: { title: string; content: string }) {
-  const [open, setOpen] = useState(false);
-  return (
-    <div className="py-4 cursor-pointer" onClick={() => setOpen(!open)}>
-      <div className="flex justify-between items-center">
-        <h3 className="text-lg font-medium">{title}</h3>
-        <span>{open ? '−' : '+'}</span>
-      </div>
-      {open && <p className="mt-2 text-gray-600">{content}</p>}
     </div>
   );
 }

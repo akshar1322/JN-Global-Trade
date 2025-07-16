@@ -1,3 +1,6 @@
+// ✅ Must be the first line in the file
+"use client";
+
 import React, { useState } from 'react';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
@@ -6,6 +9,7 @@ import { MessageCircleMore, Minus, PhoneCall, Plus } from 'lucide-react';
 import type { IProduct } from '@/models/Product';
 import Navbar from '@/components/Elements/Navbar';
 import Footer from '@/components/Elements/Footer';
+
 
 async function getProduct(id: string): Promise<IProduct | null> {
   try {

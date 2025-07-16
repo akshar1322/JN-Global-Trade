@@ -1,21 +1,13 @@
-// ❌ Don't include "use client" here
-
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 import { MessageCircleMore, PhoneCall } from 'lucide-react';
 import Navbar from '@/components/Elements/Navbar';
 import Footer from '@/components/Elements/Footer';
-import Accordion from '@/components/share/Accordion'; // client component
+import Accordion from '@/components/share/Accordion';
 import { getProduct } from '@/lib/getProduct';
 
-interface PageProps {
-  params: {
-    id: string;
-  };
-}
-
-export default async function Page({ params }: PageProps) {
+export default async function Page({ params }: { params: { id: string } }) {
   const product = await getProduct(params.id);
 
   if (!product) return notFound();

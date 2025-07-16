@@ -9,7 +9,13 @@ import Footer from '@/components/Elements/Footer';
 import Accordion from '@/components/share/Accordion'; // client component
 import { getProduct } from '@/lib/getProduct';
 
-export default async function Page({ params }: { params: { id: string } }) {
+interface PageProps {
+  params: {
+    id: string;
+  };
+}
+
+export default async function Page({ params }: PageProps) {
   const product = await getProduct(params.id);
 
   if (!product) return notFound();

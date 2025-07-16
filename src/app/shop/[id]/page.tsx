@@ -8,7 +8,6 @@ import Navbar from '@/components/Elements/Navbar';
 import Footer from '@/components/Elements/Footer';
 import Accordion from '@/components/share/Accordion'; // client component
 import { getProduct } from '@/lib/getProduct';
-import type { IProduct } from '@/models/Product';
 
 export default async function Page({ params }: { params: { id: string } }) {
   const product = await getProduct(params.id);

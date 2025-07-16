@@ -21,7 +21,7 @@ export const versions = [
   {
     date: "2025.05.09",
     oldVersion: "V SX-ACT 30r.mx.50.11 Pro (experimental)",
-    newVersion: "V SX-ACT 20R.mx.20.10 Final",
+    newVersion: "V SX-ACT 20R.mx.20.11 Final",
     content: [
       {
         label: "What",

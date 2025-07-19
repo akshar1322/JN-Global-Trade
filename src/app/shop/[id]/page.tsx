@@ -6,14 +6,14 @@ import Navbar from '@/components/Elements/Navbar';
 import Footer from '@/components/Elements/Footer';
 import Accordion from '@/components/share/Accordion';
 import { getProduct } from '@/lib/getProduct';
-// The fix involved removing this line: import type { NextPage } from 'next';
 
-interface Params {
-  id: string;
+interface PageProps {
+  params: {
+    id: string;
+  };
 }
 
-// The fix involved changing the component's type definition
-const Page = async ({ params }: { params: Params }) => {
+const Page = async ({ params }: PageProps) => {
   const product = await getProduct(params.id);
 
   if (!product) return notFound();
@@ -30,11 +30,20 @@ const Page = async ({ params }: { params: Params }) => {
         <ImagesSection images={images} name={name} />
         <div>
           <h1 className="text-3xl text-gray-800 font-semibold mb-2">{name}</h1>
-          <p className="text-xl text-gray-800 mb-4">{currency} {price}</p>
+          <p className="text-xl text-gray-800 mb-4">
+            {currency} {price}
+          </p>
           <p className="text-gray-700 mb-4">{description}</p>
-          <p className="text-gray-600 mb-6">For inquiries, you can contact us via WhatsApp or email.</p>
+          <p className="text-gray-600 mb-6">
+            For inquiries, you can contact us via WhatsApp or email.
+          </p>
           <div className="mt-8 flex items-center space-x-6">
-            <Link href={whatsappURL} target="_blank" rel="noopener noreferrer" className="text-green-500 hover:text-green-600">
+            <Link
+              href={whatsappURL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-green-500 hover:text-green-600"
+            >
               <PhoneCall size={24} />
             </Link>
             <Link href={emailURL} className="text-blue-500 hover:text-blue-600">
@@ -42,7 +51,7 @@ const Page = async ({ params }: { params: Params }) => {
             </Link>
           </div>
           <div className="mt-10 divide-y max-w-xl">
-            <Accordion title="Product info" content={description || "No additional product info available."} />
+            <Accordion title="Product info" content={description || 'No additional product info available.'} />
             <Accordion title="Return & refund policy" content="Items can be returned within 7 days..." />
             <Accordion title="Shipping info" content="We offer free shipping across India..." />
           </div>
@@ -62,9 +71,9 @@ function ImagesSection({ images, name }: { images: string[]; name: string }) {
         <Image
           src={imageUrl}
           alt={name}
-          layout="fill"
-          objectFit="contain"
-          className="rounded-md"
+          fill
+          className="object-contain rounded-md"
+          priority
         />
       </div>
     </div>

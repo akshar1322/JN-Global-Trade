@@ -7,11 +7,7 @@ import Footer from '@/components/Elements/Footer';
 import Accordion from '@/components/share/Accordion';
 import { getProduct } from '@/lib/getProduct';
 
-interface Params {
-  id: string;
-}
-
-export default async function Page({ params }: { params: Params }) {
+export default async function Page({ params }: { params: { id: string } }) {
   const product = await getProduct(params.id);
 
   if (!product) return notFound();

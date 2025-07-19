@@ -6,12 +6,13 @@ import Navbar from '@/components/Elements/Navbar';
 import Footer from '@/components/Elements/Footer';
 import Accordion from '@/components/share/Accordion';
 import { getProduct } from '@/lib/getProduct';
+import type { NextPage } from 'next';
 
 interface Params {
   id: string;
 }
 
-export default async function Page({ params }: { params: Params }) {
+const Page: NextPage<{ params: Params }> = async ({ params }) => {
   const product = await getProduct(params.id);
 
   if (!product) return notFound();
@@ -49,7 +50,7 @@ export default async function Page({ params }: { params: Params }) {
       <Footer />
     </>
   );
-}
+};
 
 function ImagesSection({ images, name }: { images: string[]; name: string }) {
   const imageUrl = images && images.length > 0 ? images[0] : '/placeholder-image.png';
@@ -68,3 +69,5 @@ function ImagesSection({ images, name }: { images: string[]; name: string }) {
     </div>
   );
 }
+
+export default Page;

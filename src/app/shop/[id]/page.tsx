@@ -13,7 +13,7 @@ interface PageProps {
   };
 }
 
-const Page = async ({ params }: PageProps) => {
+export default async function Page({ params }: { params: { id: string } }) {
   const product = await getProduct(params.id);
 
   if (!product) return notFound();
@@ -60,7 +60,7 @@ const Page = async ({ params }: PageProps) => {
       <Footer />
     </>
   );
-};
+}
 
 function ImagesSection({ images, name }: { images: string[]; name: string }) {
   const imageUrl = images && images.length > 0 ? images[0] : '/placeholder-image.png';
@@ -79,5 +79,3 @@ function ImagesSection({ images, name }: { images: string[]; name: string }) {
     </div>
   );
 }
-
-export default Page;

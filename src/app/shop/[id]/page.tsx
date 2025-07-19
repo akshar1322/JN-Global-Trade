@@ -6,14 +6,9 @@ import Navbar from '@/components/Elements/Navbar';
 import Footer from '@/components/Elements/Footer';
 import Accordion from '@/components/share/Accordion';
 import { getProduct } from '@/lib/getProduct';
+import { PageProps as NextPageProps } from 'next'; // Import the correct type
 
-interface PageProps {
-  params: {
-    id: string;
-  };
-}
-
-export default async function Page({ params }: PageProps) {
+export default async function Page({ params }: NextPageProps) {
   const product = await getProduct(params.id);
 
   if (!product) return notFound();

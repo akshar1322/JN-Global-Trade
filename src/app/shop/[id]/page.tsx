@@ -6,13 +6,13 @@ import Navbar from '@/components/Elements/Navbar';
 import Footer from '@/components/Elements/Footer';
 import Accordion from '@/components/share/Accordion';
 import { getProduct } from '@/lib/getProduct';
-// Remove this line: import type { NextPage } from 'next'; // ❌ Not needed for App Router server components
+// The fix involved removing this line: import type { NextPage } from 'next';
 
 interface Params {
   id: string;
 }
 
-// Directly define the props for the Page component
+// The fix involved changing the component's type definition
 const Page = async ({ params }: { params: Params }) => {
   const product = await getProduct(params.id);
 

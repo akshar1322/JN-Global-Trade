@@ -19,7 +19,7 @@ export function InstagramSlider() {
     <div className="bg-black text-white py-10 px-4">
       <div className="text-center mb-6">
         <h2 className="text-2xl md:text-3xl font-serif font-medium">Follow us on Instagram</h2>
-        <p className="text-sm text-gray-400 mt-2">@dennel &nbsp; <span className="text-pink-400">#dennelgold</span></p>
+        <p className="text-sm text-gray-400 mt-2">@j_n_global_trade &nbsp; <span className="text-pink-400">#JN global trade</span></p>
       </div>
 
       <div className="relative">

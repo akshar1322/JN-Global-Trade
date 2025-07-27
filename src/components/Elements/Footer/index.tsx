@@ -111,11 +111,21 @@ const Footer = () => {
       <div className="flex flex-col md:flex-row justify-between items-center mt-12 border-t border-white pt-6 text-sm max-w-7xl mx-auto">
         <div className="text-7xl font-serif italic">Jn Global</div>
 
+
+
         <div className="flex space-x-4 mt-4 md:mt-0 text-sm">
-          <a href="#" target="_blank" rel="noopener noreferrer">Instagram</a>
-          <a href="#" target="_blank" rel="noopener noreferrer">Twitter</a>
-          <a href="#" target="_blank" rel="noopener noreferrer">Facebook</a>
-          <a href="#" target="_blank" rel="noopener noreferrer">Pinterest</a>
+          <Link href="https://www.instagram.com/j_n_global_trade/" passHref legacyBehavior>
+            <a target="_blank" rel="noopener noreferrer">Instagram</a>
+          </Link>
+          <Link href="https://twitter.com" passHref legacyBehavior>
+            <a target="_blank" rel="noopener noreferrer">Twitter</a>
+          </Link>
+          <Link href="https://facebook.com" passHref legacyBehavior>
+            <a target="_blank" rel="noopener noreferrer">Facebook</a>
+          </Link>
+          <Link href="https://pinterest.com" passHref legacyBehavior>
+            <a target="_blank" rel="noopener noreferrer">Pinterest</a>
+          </Link>
         </div>
 
         <div className="mt-4 md:mt-0 text-ms text-right uppercase">

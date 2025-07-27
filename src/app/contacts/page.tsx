@@ -50,8 +50,8 @@ export default function ContactPage() {
                         {/* Left: Info */}
                         <div className="space-y-4 text-lg">
                         <h3 className="text-xl font-semibold">Customer Service</h3>
-                        <p>Phone: 123-456-7890</p>
-                        <p>Email: info@mysite.com</p>
+                        <p>Phone: +91 73597-09631</p>
+                        <p>Email: jnglobaltrade55@gmail.com</p>
                         <p>Hours: Monday-Friday 9:00am - 7:00pm EST</p>
                         <p>For questions regarding our products and services you can also contact us by filling out the form below.</p>
                         </div>

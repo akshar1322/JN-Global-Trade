@@ -40,22 +40,20 @@ const Footer = () => {
           <ul className="space-y-2">
             <li><Link href="/home">Home</Link></li>
             <li><Link href="/shop">Shop</Link></li>
-            <li><Link href="/">Our Story</Link></li>
-            <li><Link href="/">Gift Card</Link></li>
             <li><Link href="/contacts">Contact</Link></li>
-            <li><Link href="/">Locations</Link></li>
+            <li><Link href="/contacts">Locations</Link></li>
           </ul>
         </div>
 
         {/* Policies */}
         <div>
           <ul className="space-y-2">
-            <li><Link href="/">FAQ</Link></li>
+            {/* <li><Link href="/">FAQ</Link></li>
             <li><Link href="/">Terms & Conditions</Link></li>
             <li><Link href="/">Shipping Policy</Link></li>
             <li><Link href="/">Refund Policy</Link></li>
             <li><Link href="/">Privacy Policy</Link></li>
-            <li><Link href="/">Accessibility Statement</Link></li>
+            <li><Link href="/">Accessibility Statement</Link></li> */}
           </ul>
         </div>
 

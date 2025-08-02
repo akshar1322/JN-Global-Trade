@@ -76,7 +76,7 @@ export default function HeroSection() {
       </motion.div>
 
       {/* CTA Button */}
-      <Link href="/shop-all" className="absolute bottom-10 right-10 z-20">
+      <Link href="/shop" className="absolute bottom-10 right-10 z-20">
         <motion.button
           className="px-6 py-3 border border-black text-sm uppercase tracking-wider flex items-center gap-2 hover:bg-black hover:text-white transition duration-300"
           whileHover={{ scale: 1.05 }}

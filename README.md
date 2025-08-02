@@ -8,7 +8,7 @@ JN Global Trade is a trusted name in the jewelry industry, offering exquisite co
 Developer
 Name: Akshar Patel
 
-Agency: SplitX
+Agency: SplitXLLC
 
 Agency Website: https://splitxcom.vercel.app/
 
